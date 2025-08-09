@@ -1,0 +1,152 @@
+ /* Custom CSS matching your website's theme */
+        :root {
+            --sy-primary: #0d6efd; /* SahaYana Primary Blue */
+            --sy-dark: #212529;
+            --sy-light: #f8f9fa;
+            --sy-white: #ffffff;
+            --sy-muted: #6c757d;
+            --sy-success: #198754;
+            --sy-danger: #dc3545;
+            --sy-warning: #ffc107;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: var(--sy-light);
+            color: var(--sy-dark);
+        }
+
+        /* Hero Section Styling - Consistent with Home_Page */
+        .hero-section {
+            position: relative;
+            padding: 100px 0;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            color: var(--sy-white);
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-weight: 700;
+            font-size: 3.5rem;
+        }
+
+        .hero-section p {
+            font-size: 1.25rem;
+            max-width: 750px;
+            margin: 1rem auto 0;
+        }
+
+        /* Further Reading Section */
+        .further-reading-section {
+            background-color: var(--sy-white);
+            padding: 60px 0;
+        }
+
+        .article-card {
+            border: 1px solid #dee2e6;
+            border-radius: 0.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: var(--sy-dark);
+            display: block;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .article-card .card-body {
+            padding: 1.5rem;
+        }
+        
+        .article-card h5 {
+            color: var(--sy-primary);
+            font-weight: 600;
+        }
+
+        /* Main Guidelines Section */
+        .guidelines-section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-weight: 700;
+            margin-bottom: 4rem;
+        }
+
+        .guideline-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2.5rem;
+        }
+
+        .guideline-item .icon {
+            font-size: 2rem;
+            margin-right: 1.5rem;
+            color: var(--sy-primary);
+        }
+
+        .guideline-item h5 {
+            font-weight: 600;
+        }
+
+        .guideline-item p {
+            color: var(--sy-muted);
+        }
+
+        /* Report Card Styling */
+        .report-card-flyer {
+            background-color: var(--sy-white);
+            border-radius: 0.5rem;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+            border: 1px solid #e9ecef;
+        }
+        
+        /* "Take the Leap" CTA Section */
+        .cta-section {
+            background-color: var(--sy-white);
+            padding: 80px 0;
+        }
+        
+        .cta-section img {
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        /* Report Form Section */
+        .report-form-section {
+            padding: 80px 0;
+            background-color: #e9ecef;
+        }
+        
+        .report-form-section .form-control:focus {
+            border-color: var(--sy-primary);
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+        }
+        
+        /* General Button Style */
+        .btn-primary {
+            background-color: var(--sy-primary);
+            border-color: var(--sy-primary);
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+        
+        .btn-secondary {
+            background-color: var(--sy-muted);
+            border-color: var(--sy-muted);
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+        }

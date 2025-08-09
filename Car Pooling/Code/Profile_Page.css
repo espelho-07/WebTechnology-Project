@@ -1,0 +1,24 @@
+/* Custom Styles for Car Pooling Website */
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* You can add more global styles here if needed */
+}
+
+/* Enhancing card shadow (optional, Bootstrap's shadow-sm is usually enough) */
+.card {
+  border: none; /* Remove default card border */
+  border-radius: 0.75rem; /* Slightly more rounded corners */
+}
+
+/* Adjusting button hover effect (optional) */
+.btn-primary:hover {
+  filter: brightness(
+    90%
+  ); /* Slightly darken the primary button on hover for a subtle effect */
+}
+
+/* Style for links within form messages */
+.text-decoration-none {
+  font-weight: 500;
+}

@@ -1,0 +1,87 @@
+/* === Root CSS Variables === */
+:root {
+    --saha-primary: #00796b;
+    --saha-primary-dark: #004d40;
+    --saha-light-bg: #e0f2f1;
+}
+
+/* === Base Body Styling === */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    padding-top: 70px;
+}
+
+/* === Headings Styling === */
+h1, h2, h3 {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* === Bootstrap Component Overrides === */
+.btn-primary {
+    background-color: var(--saha-primary);
+    border-color: var(--saha-primary);
+}
+.btn-primary:hover {
+    background-color: var(--saha-primary-dark);
+    border-color: var(--saha-primary-dark);
+}
+.btn-link {
+    color: var(--saha-primary);
+    text-decoration: none;
+}
+.accordion-button:not(.collapsed) {
+    background-color: var(--saha-light-bg);
+    color: var(--saha-primary-dark);
+}
+
+/* === Hero Section Styling === */
+.hero-section {
+    padding: 60px 20px;
+    background-color: var(--saha-light-bg);
+}
+.hero-section h1 {
+    font-size: 3em;
+    color: var(--saha-primary-dark);
+}
+.hero-section p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #00695c;
+}
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.2em;
+    }
+}
+
+/* === Custom Card Styling === */
+.custom-card {
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1) !important;
+}
+.card-icon {
+    font-size: 2.5em;
+    color: var(--saha-primary);
+}
+
+/* === Testimonial Card Styling === */
+.testimonial-card {
+    background-color: #f8f9fa;
+    border-left: 5px solid var(--saha-primary) !important;
+}
+.testimonial-card .author {
+    font-weight: 600;
+    color: #333;
+}
+
+/* === Contact Info Panel Styling === */
+.contact-info-panel {
+    background-color: var(--saha-primary);
+}

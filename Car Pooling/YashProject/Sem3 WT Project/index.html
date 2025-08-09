@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DrivUP</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <!-- page header --navbar  -->
+    <header>
+        <nav class="navbar navbar-expand-lg py-4 py-lg-0 shadow">
+            <div class="container px-4">
+                <h1>
+                    <a class="mn_link" href="">
+                        DrivUp
+                    </a>
+                </h1>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#top-navbar" aria-controls="top-navbar">
+                    <i class="bi bi-grid"></i>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="top-navbar" aria-labelledby="top-navbarLabel">
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#top-navbar" aria-controls="top-navbar">
+                        <div class="d-flex justify-content-between p-3">
+                            <h1>DrivUp</h1>
+                            <i class="bi bi-x-circle"></i>
+                        </div>
+                    </button>
+                    <ul class="navbar-nav ms-lg-auto p-4 p-lg-0 nav_ul">
+                        <li class="nav-item ms-2 px-3 px-lg-0 py-1 py-lg-4">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item ms-2 px-3 px-lg-0 py-1 py-lg-4">
+                            <a class="nav-link" href="#">Search Ride</a>
+                        </li>
+                        <li class="nav-item ms-2 px-3 px-lg-0 py-1 py-lg-4">
+                            <a class="nav-link" href="#">Offer Ride</a>
+                        </li>
+                        <li class="nav-item ms-2 px-3 px-lg-0 py-1 py-lg-4 dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Pages
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Term </a></li>
+                                <li><a class="dropdown-item" href="#">FAQ</a></li>
+                                <li><a class="dropdown-item" href="#">About Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item ms-0 ms-lg-3 px-3 px-lg-0 py-1 py-lg-4">
+                            <button type="button" onclick="window.location.href='login.html'" class="btn btn-primary">Sign Up</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="bg-light">
+        <section class="py-5">
+            <div class="container mt-5">
+                <p class="h2 text-center mb-5 text-primary">Welcome to DrivUp - Smarter, Greener, and Cheaper Travel!</p>
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-4 mb-md-0 text-center">
+                        <img src="Img1.jpg" alt="Carpooling Image" class="img-fluid rounded custom_img">
+                    </div>
+                    <div class="col-md-6">
+                        <p class="h4 mb-3">Find Your Ride. Share the Journey. Save More.</p>
+                        <p>
+                            Tired of traveling alone or paying high fuel costs? Whether you're heading to work, college, or across the city, 
+                            <strong>DrivUp</strong> connects you with trusted carpoolers nearby. Join a growing community of people who believe in saving
+                            money, reducing traffic, and protecting the environment—one ride at a time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-2">
+            <div class="container">
+                <div class="row text-center my-3">
+                    <div class="col-md-6">
+                        <div class="card h-100 zoom-hover">
+                            <div class="card-body">
+                                <i class="bi bi-car-front display-4 mb-3 text-primary"></i>
+                                <h5 class="card-title">Are You a Driver?</h5>
+                                <p class="card-text">Offer a ride and fill your empty seats. Share fuel costs and meet fellow commuters.
+                                </p>
+                                <a href="/offer-ride" class="btn btn-primary">Offer a Ride</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 zoom-hover">
+                            <div class="card-body">
+                                <i class="bi bi-person-walking display-4 mb-3 text-success"></i>
+                                <h5 class="card-title">Looking for a Ride?</h5>
+                                <p class="card-text">Find a ride that matches your route. Travel affordably and comfortably with
+                                    verified drivers.</p>
+                                <a href="/search-ride" class="btn btn-success">Search Ride</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center">Join us today and make your commute smarter and more social!</p>
+                <!-- Add more sections here like features, benefits, testimonials -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-light pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h4>DrivUp</h4>
+                    <p>Smarter, greener, and cheaper travel. Share your ride or find one easily with DrivUp!</p>
+                </div>
+    
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="#" class="footer-link">Search Ride</a></li>
+                        <li><a href="#" class="footer-link">Offer Ride</a></li>
+                        <li><a href="#" class="footer-link">FAQ</a></li>
+                    </ul>
+                </div>
+    
+                <div class="col-md-4 mb-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="bi bi-envelope"></i> support@drivup.com</p>
+                    <p><i class="bi bi-telephone"></i> +91 12345 67890</p>
+                    <div>
+                        <a href="#" class="text-light me-3"><i class="bi bi-facebook iconn"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-twitter-x iconn"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-instagram iconn"></i></a>
+                    </div>
+                </div>
+            </div>
+    
+            <hr class="border-light" />
+            <p class="text-center mb-0">&copy; 2025 DrivUp. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>3

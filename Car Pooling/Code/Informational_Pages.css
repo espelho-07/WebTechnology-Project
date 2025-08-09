@@ -1,0 +1,101 @@
+/* === Root CSS Variables === */
+:root {
+    --saha-primary: #00796b;
+    --saha-primary-dark: #004d40;
+    --saha-light-bg: #e0f2f1;
+}
+
+/* === Base Body Styling === */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    padding-top: 70px; /* Adjust if your navbar height changes */
+}
+
+/* === Headings Styling === */
+h1, h2, h3, h4, h5 {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* === Bootstrap Component Overrides === */
+.btn-primary {
+    background-color: var(--saha-primary);
+    border-color: var(--saha-primary);
+}
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--saha-primary-dark);
+    border-color: var(--saha-primary-dark);
+}
+.accordion-button:not(.collapsed) {
+    background-color: var(--saha-light-bg);
+    color: var(--saha-primary-dark);
+}
+
+/* === Hero Section Styling === */
+.hero-section {
+    padding: 60px 20px;
+    background-color: var(--saha-light-bg);
+}
+.hero-section h1 {
+    font-size: 3em;
+    color: var(--saha-primary-dark);
+}
+.hero-section p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #00695c;
+}
+
+/* === Reusable Info Item Component === */
+.info-item, .guideline-item {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+.info-item i, .guideline-item i {
+    font-size: 2rem;
+    color: var(--saha-primary);
+    margin-right: 1.5rem;
+    min-width: 32px;
+}
+.info-item h5, .guideline-item h5 {
+    margin-bottom: 0.25rem;
+    font-weight: 700;
+}
+
+/* === Feature Card (For Business & Driver Safety) === */
+.feature-card {
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+    transition: transform 0.3s ease;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--saha-primary);
+    margin-bottom: 1rem;
+}
+
+/* === Route Card (For Popular Routes) === */
+.route-card {
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+    transition: transform 0.3s ease;
+}
+.route-card:hover {
+    transform: translateY(-5px);
+}
+.route-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.2em;
+    }
+}

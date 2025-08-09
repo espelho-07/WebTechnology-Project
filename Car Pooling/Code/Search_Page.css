@@ -1,0 +1,240 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #f8f9fa;
+    --text-color: #333;
+    --light-gray: #e9ecef;
+    --dark-gray: #6c757d;
+    --white: #fff;
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --box-shadow-light: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--text-color);
+}
+
+
+/* --- Header & Search Section --- */
+.main-section {
+    position: relative;
+    padding: 120px 0;
+    background-image: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    text-align: center;
+}
+
+/* Overlay for the background image */
+.main-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Ensure content is above the overlay */
+.main-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.search-form-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+/* --- Popular Routes Section --- */
+#popular-routes {
+    background-color: var(--secondary-color);
+}
+
+.route-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.route-card {
+    flex: 1;
+    min-width: 320px; /* MODIFIED: Enforces a wider rectangular base */
+    max-width: 380px; /* MODIFIED: Allows for a wider shape */
+    background: var(--white);
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-light);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.route-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--box-shadow);
+}
+
+.route-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+
+/* --- Publish Ride Call-to-Action Section --- */
+#publish-ride-cta {
+    background: linear-gradient(45deg, #007bff, #6610f2);
+    color: var(--white);
+    text-align: center;
+    padding: 4rem 2rem;
+    border-radius: 0.5rem;
+    margin-top: 3rem;
+}
+
+#publish-ride-cta h2 {
+    color: var(--white);
+}
+
+#publish-ride-cta .btn-primary {
+    display: inline-block;
+    background-color: var(--white);
+    color: var(--primary-color);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#publish-ride-cta .btn-primary:hover {
+    background-color: var(--light-gray);
+    color: #0056b3;
+}
+
+
+/* --- Review Section --- */
+.review-card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1rem;
+}
+
+.review-card blockquote {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.review-card cite {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+
+/* --- How It Works Section --- */
+.step-card {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.step-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+}
+
+
+/* --- Why Choose Us Section --- */
+#why-choose-us {
+    background-color: var(--light-gray);
+}
+
+.feature-card {
+    background: var(--white);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-light);
+    height: 100%;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+
+/* --- Testimonials Section --- */
+.testimonial-card {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 5px solid var(--primary-color);
+    height: 100%;
+}
+
+.testimonial-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    object-fit: cover;
+}
+
+.testimonial-card blockquote {
+    font-style: italic;
+    color: var(--dark-gray);
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* --- FAQ Section --- */
+#faq {
+    background-color: var(--white);
+}
+
+.accordion-item {
+    border: 1px solid #ddd;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.accordion-button {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}

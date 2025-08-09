@@ -1,0 +1,27 @@
+.hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1612429299491-18dd4c65f333?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            color: white;
+        }
+
+        .section-icon {
+            font-size: 3rem;
+            color: var(--bs-primary);
+        }
+
+        .card.feature-card {
+            border: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card.feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #e7f5ff;
+            color: var(--bs-primary);
+        }

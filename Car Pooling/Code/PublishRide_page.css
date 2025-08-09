@@ -1,0 +1,88 @@
+/* Styling for the sticky sidebar */
+.sticky-sidebar {
+    position: sticky;
+    top: 100px; /* Adjust based on navbar height */
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+}
+
+/* Card header styling for better visual grouping */
+.ride-form .card-header {
+    background-color: var(--bs-light-bg-subtle);
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+.ride-form .card-header h5 {
+    color: var(--bs-primary);
+    font-weight: 600;
+}
+
+/* Fixed footer for the publish button */
+.publish-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--bs-tertiary-bg);
+    padding: 0.75rem 0;
+    border-top: 1px solid var(--bs-border-color);
+    z-index: 100;
+}
+
+.publish-footer .btn {
+    min-width: 250px;
+}
+
+.publish-footer .help-link {
+    text-decoration: none;
+    color: var(--bs-secondary-color);
+    font-size: 0.9rem;
+}
+.publish-footer .help-link:hover {
+    color: var(--bs-primary);
+}
+
+
+/* Adjust main content padding to prevent overlap with the fixed footer */
+main {
+    padding-bottom: 100px; /* Height of the publish-footer */
+}
+
+/* Payment Logos styling */
+.payment-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.payment-logos img {
+    height: 28px;
+    opacity: 0.8;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.payment-logos img:hover {
+    opacity: 1;
+}
+
+/* Dark theme adjustments */
+[data-bs-theme="dark"] .publish-footer {
+    background-color: #2b3035;
+    border-top-color: #495057;
+}
+
+[data-bs-theme="dark"] .ride-form .card {
+     background-color: #343a40;
+    border-color: #495057;
+}
+
+[data-bs-theme="dark"] .payment-logos img {
+    filter: invert(1) opacity(0.8);
+}
+
+[data-bs-theme="dark"] .payment-logos img:hover {
+    filter: invert(1) opacity(1);
+}
+

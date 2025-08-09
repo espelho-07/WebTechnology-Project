@@ -1,0 +1,91 @@
+/* === Root CSS Variables === */
+:root {
+    --saha-primary: #00796b;
+    --saha-primary-dark: #004d40;
+    --saha-light-bg: #e0f2f1;
+}
+
+/* === Base Body Styling === */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    padding-top: 70px;
+}
+
+/* === Headings Styling === */
+h1, h2, h3, h4, h5 {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* === Bootstrap Component Overrides === */
+.btn-primary {
+    background-color: var(--saha-primary);
+    border-color: var(--saha-primary);
+}
+.btn-primary:hover {
+    background-color: var(--saha-primary-dark);
+    border-color: var(--saha-primary-dark);
+}
+
+/* === Hero Section Styling === */
+.hero-section {
+    padding: 60px 20px;
+    background-color: var(--saha-light-bg);
+}
+.hero-section h1 {
+    font-size: 3em;
+    color: var(--saha-primary-dark);
+}
+.hero-section p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #00695c;
+}
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.2em;
+    }
+}
+
+/* === Search Container Styling === */
+.search-container {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* === Topic Card Styling === */
+.custom-card {
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ddd;
+}
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1) !important;
+    border-color: var(--saha-primary);
+}
+.card-icon {
+    font-size: 2.5em;
+    color: var(--saha-primary);
+}
+.topic-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+.topic-card-link:hover .custom-card h3 {
+    color: var(--saha-primary);
+}
+
+/* === Popular Questions List Styling === */
+.popular-questions-list .list-group-item {
+    padding: 1rem 1.25rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.popular-questions-list .list-group-item:hover {
+    color: var(--saha-primary);
+    background-color: #f8f9fa;
+}

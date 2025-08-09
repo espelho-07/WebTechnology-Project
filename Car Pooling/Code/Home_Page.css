@@ -1,0 +1,55 @@
+.main-section {
+    position: relative;
+    padding: 120px 0;
+    background-image: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+.main-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.main-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.search-form-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+}
+
+.user-actions a {
+    color: white;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.user-actions a:hover {
+    color: #d4d4d4;
+}
+
+.testimonial-card {
+    border: none;
+}
+
+.stats-box {
+    background: #e0f7fa;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}

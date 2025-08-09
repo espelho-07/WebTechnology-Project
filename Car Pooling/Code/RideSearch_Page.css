@@ -1,0 +1,80 @@
+/* Filter sidebar styles */
+.filters-sidebar {
+    position: sticky;
+    top: 100px;
+    /* Adjust sticky top position based on navbar height */
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    background-color: var(--bs-tertiary-bg);
+    border: 1px solid var(--bs-border-color);
+}
+
+[data-bs-theme="dark"] .filters-sidebar {
+    background-color: #2b3035;
+    border-color: #495057;
+}
+
+/* Ride result card styles */
+.ride-card h5,
+.ride-card h4 {
+    color: var(--bs-primary);
+}
+
+.ride-card .card-footer {
+    font-size: 0.9rem;
+}
+
+[data-bs-theme="dark"] .ride-card {
+    background-color: #343a40;
+    border-color: #495057;
+}
+
+.search-bar {
+    background: #fff;
+    border-radius: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 5%;
+}
+
+.form-section {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    min-width: 0;
+}
+
+.form-section input,
+.form-section select {
+    border: none;
+    outline: none;
+    width: 100%;
+    background: transparent;
+}
+
+.form-section input::placeholder {
+    color: #666;
+}
+
+.divider {
+    border-left: 1px solid #ccc;
+    height: 2rem;
+}
+
+.search-btn {
+    background-color: #00bfff;
+    color: white;
+    font-weight: bold;
+    padding: 0.6rem 1.2rem;
+    border-radius: 1rem;
+}
+.search-bar-wrapper {
+    position: sticky;
+    top: 70px; /* height of your navbar */
+    z-index: 1020; /* higher than other elements */
+    background: white; /* to avoid transparent look */
+}
