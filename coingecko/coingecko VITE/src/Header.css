@@ -10,3 +10,38 @@
 .dropdown-toggle::after {
   display: none;
 }
+
+.hr-light {
+    border: none;
+    border-top: 2px solid #ddd;
+}
+
+.btn-custom-outline {
+  background-color: white;
+  border: 1px solid #dee2e6; 
+  color: #212529; 
+  padding: 0.15rem 0.15rem;
+  border-radius: 0.5rem; 
+  font-weight: 600;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.btn-custom-outline:hover {
+  background-color: #f8f9fa; 
+}
+
+.btn-3d-green {
+  background-color: #267d22; 
+  color: white;
+  font-weight: 30;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.5rem;
+  border: none;
+  box-shadow: 0 4px 0 0 #0a4f24;
+  transition: all 0.15s ease-out;
+}
+
+.btn-3d-green:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}

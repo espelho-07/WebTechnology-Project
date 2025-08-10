@@ -1,4 +1,35 @@
-.navbar .nav-item.dropdown:hover .dropdown-menu {
-  display: block;
-  margin-top: 0;
+/* custom.css */
+
+
+
+/* Define the custom green color using a CSS variable */
+
+:root {
+
+  --coingecko-green: #8dc647;
+
+  --coingecko-green-darker: #7cb43e; /* A slightly darker shade for hover */
+
+}
+
+
+
+/* Override Bootstrap's .btn-primary */
+
+.btn-primary {
+
+  --bs-btn-bg: var(--coingecko-green);
+
+  --bs-btn-border-color: var(--coingecko-green);
+
+  --bs-btn-hover-bg: var(--coingecko-green-darker);
+
+  --bs-btn-hover-border-color: var(--coingecko-green-darker);
+
+  --bs-btn-active-bg: var(--coingecko-green-darker);
+
+  --bs-btn-active-border-color: var(--coingecko-green-darker);
+
+  --bs-btn-focus-shadow-rgb: 49, 132, 253; /* Optional: you can adjust this glow color */
+
 }

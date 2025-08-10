@@ -3,7 +3,7 @@ import React from 'react';
 function Header() {
     return (
         <>
-            {/* Top statistics bar */}
+            {/* Top bar Showing Stats. */}
             <div className="container mt-3 d-none d-lg-block small text-muted">
                 <div className="d-flex justify-content-between align-items-center">
                     <div className="stats">
@@ -21,7 +21,7 @@ function Header() {
                             {/* Settings Dropdown */}
                             <div className="nav-item dropdown">
                                 <button className="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="bi bi-gear"></i>
+                                    <i className="bi bi-gear"></i>
                                 </button>
                                 <ul className="dropdown-menu dropdown-menu-end">
                                     <li><a className="dropdown-item d-flex justify-content-between" href="#">Language <span className="text-muted">English</span></a></li>
@@ -33,7 +33,7 @@ function Header() {
                             {/* Get App Dropdown */}
                             <div className="nav-item dropdown dropdown-hover">
                                 <button className="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="bi bi-phone"></i>
+                                    <i className="bi bi-phone"></i>
                                 </button>
                                 <div className="dropdown-menu dropdown-menu-end p-3 text-center" style={{ width: '220px' }}>
                                     <img alt="app QR code" className="img-fluid mb-2" src="https://static.coingecko.com/s/navbar_gekko_app_qr_code-9c7a6abb02579193774328071d5a6b244564f81e6978c1ffc3d86904b54685f4.png" />
@@ -43,14 +43,16 @@ function Header() {
                             </div>
 
                             {/* Login and Sign Up Buttons */}
-                            <a href="#" role="button" className="btn btn-outline-secondary btn-sm">Login</a>
-                            <a href="#" role="button" className="btn btn-success btn-sm">Sign up</a>
+                            <a href="#" role="button" className="btn  btn-outline-secondary btn-sm">Login</a>
+                            <a href="#" role="button" className="btn btn-3d-green btn-primary btn-sm">Sign up</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <hr />
+            {/* Underline */}
+            <hr className='hr-light'/>
+
             {/* Main Navigation Bar */}
             <nav className="navbar navbar-expand-xl mb-0 py-0">
                 <div className="container">
@@ -147,7 +149,9 @@ function Header() {
                     </div>
                 </div>
             </nav>
-            <hr></hr>
+
+            {/* Underline */}
+            <hr className='hr-light'/>
             
         </>
     );
