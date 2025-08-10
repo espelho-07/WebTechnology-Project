@@ -4,7 +4,7 @@ function Header() {
     return (
         <>
             {/* Top bar Showing Stats. */}
-            <div className="container mt-3 d-none d-lg-block small text-muted">
+            <div className="container my-3 d-none d-lg-block small text-muted">
                 <div className="d-flex justify-content-between align-items-center">
                     <div className="stats">
                         <span className='pe-4 small'>Coins: <a href="#" className='fw-semibold text-dark text-decoration-none'>18,017</a></span>
@@ -24,9 +24,9 @@ function Header() {
                                     <i className="bi bi-gear"></i>
                                 </button>
                                 <ul className="dropdown-menu dropdown-menu-end">
-                                    <li><a className="dropdown-item d-flex justify-content-between" href="#">Language <span className="text-muted">English</span></a></li>
-                                    <li><a className="dropdown-item d-flex justify-content-between" href="#">Currency <span className="text-muted">USD</span></a></li>
-                                    <li><a className="dropdown-item d-flex justify-content-between" href="#">Dark Mode <i className="fas fa-toggle-off"></i></a></li>
+                                    <li><a className="dropdown-item text-dark d-flex justify-content-between" href="#">Language <span className="text-muted ps-5">English</span></a></li>
+                                    <li><a className="dropdown-item text-dark d-flex justify-content-between" href="#">Currency <span className="text-muted ps-5">USD</span></a></li>
+                                    <li><a className="dropdown-item text-dark d-flex justify-content-between" href="#">Dark Mode <i className="fas fa-toggle-off ps-1"></i></a></li>
                                 </ul>
                             </div>
 
@@ -44,14 +44,14 @@ function Header() {
 
                             {/* Login and Sign Up Buttons */}
                             <a href="#" role="button" className="btn  btn-outline-secondary btn-sm">Login</a>
-                            <a href="#" role="button" className="btn btn-3d-green btn-primary btn-sm">Sign up</a>
+                            <a href="#" role="button" className="btn btn-primary btn-sm">Sign up</a>
                         </div>
                     </div>
                 </div>
             </div>
 
             {/* Underline */}
-            <hr className='hr-light'/>
+            <hr className='hr-light' />
 
             {/* Main Navigation Bar */}
             <nav className="navbar navbar-expand-xl mb-0 py-0">
@@ -151,8 +151,8 @@ function Header() {
             </nav>
 
             {/* Underline */}
-            <hr className='hr-light'/>
-            
+            <hr className='hr-light' />
+
         </>
     );
 }
