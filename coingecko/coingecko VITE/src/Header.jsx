@@ -68,8 +68,8 @@ function Header() {
                         <ul className="navbar-nav">
                             <li className="nav-item dropdown me-3"><a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cryptocurrencies</a>
                                 <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="#"><i className="fas fa-chart-bar mb-2 text-muted"></i>By Market Cap</a></li>
-                                    <li><a className="dropdown-item" href="#"><i className="fas fa-th mb-2 text-muted"></i>Categories</a></li>
+                                    <li><a className="dropdown-item" href="#"><i className="fas fa-ranking-star fa-fw mb-2 text-muted"></i>By Market Cap</a></li>
+                                    <li><a className="dropdown-item" href="#"><i className="fas fa-shapes fa-fw mb-2 text-muted"></i>Categories</a></li>
                                     <li><a className="dropdown-item" href="#"><i className="fas fa-link mb-2 text-muted"></i>Chains</a></li>
                                     <li><hr className="dropdown-divider" /></li>
                                     <li><h6 className="dropdown-header">Popular</h6></li>
