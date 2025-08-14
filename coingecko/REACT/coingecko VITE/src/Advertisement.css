@@ -1,0 +1,11 @@
+/* Custom style to handle responsive height for the ad container */
+.ad-container-height {
+  height: 50px;
+}
+
+/* This media query applies the 100px height on medium screens (like tablets) and larger */
+@media (min-width: 768px) {
+  .ad-container-height {
+    height: 100px;
+  }
+}
