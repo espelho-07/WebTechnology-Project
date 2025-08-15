@@ -1,0 +1,106 @@
+body {
+    background-color: #f8f9fa;
+}
+
+[data-bs-theme="dark"] body {
+    background-color: #161a23;
+}
+
+.card {
+    border-color: #dee2e6;
+}
+
+[data-bs-theme="dark"] .card {
+    background-color: #0d1117;
+    border-color: #30363d;
+}
+
+.table {
+    --bs-table-hover-bg: #f8f9fa;
+}
+
+[data-bs-theme="dark"] .table {
+    --bs-table-hover-bg: #1f242e;
+}
+
+.gecko-up {
+    color: #16c784;
+}
+
+.gecko-down {
+    color: #ea3943;
+}
+
+.nav-pills .nav-link {
+    color: #6c757d;
+    background-color: #e9ecef;
+    margin-right: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.nav-pills .nav-link.active {
+    color: #fff;
+    background-color: #0d6efd;
+}
+
+[data-bs-theme="dark"] .nav-pills .nav-link {
+    color: #adb5bd;
+    background-color: #343a40;
+}
+
+[data-bs-theme="dark"] .nav-pills .nav-link.active {
+    color: #fff;
+    background-color: #0d6efd;
+}
+
+.btn-customize {
+    background-color: #e9ecef;
+}
+
+.btn-customize:hover {
+    background-color: #ced4da;
+}
+
+[data-bs-theme="dark"] .btn-customize {
+    background-color: #343a40;
+    color: #fff;
+}
+
+[data-bs-theme="dark"] .btn-customize:hover {
+    background-color: #495057;
+}
+
+.table-responsive .sticky-col-1 {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background-color: inherit;
+}
+
+.table-responsive .sticky-col-2 {
+    position: sticky;
+    left: 35px;
+    z-index: 2;
+    background-color: inherit;
+}
+
+.table-responsive .sticky-col-3 {
+    position: sticky;
+    left: 80px;
+    z-index: 2;
+    background-color: inherit;
+}
+
+thead.sticky-top {
+    z-index: 3;
+}
+
+/* Force Coin column to stretch */
+#cryptoTable td:nth-child(3) {
+    width: 100%;
+}
+
+/* Prevent coin name/symbol from wrapping */
+#cryptoTable td:nth-child(3) .d-flex {
+    white-space: nowrap;
+}
