@@ -9,7 +9,8 @@
 /* --- General Page Styles --- */
 
 body {
-    background-color: #ffffff; /* Sets a standard white background */
+    background-color: #ffffff;
+    /* Sets a standard white background */
 }
 
 
@@ -17,17 +18,21 @@ body {
 
 /* Green button used for "Sign up" and "Subscribe" */
 .btn-customi {
-    background-color: #4bcc00; /* A vibrant green color */
-    color: white; /* White text for contrast */
+    background-color: #4bcc00;
+    /* A vibrant green color */
+    color: white;
+    /* White text for contrast */
 }
 
 /* Gray button used for "Customize" */
 .btn-customize {
-    background-color: #e9ecef; /* A light gray */
+    background-color: #e9ecef;
+    /* A light gray */
 }
 
 .btn-customize:hover {
-    background-color: #ced4da; /* A slightly darker gray on hover */
+    background-color: #ced4da;
+    /* A slightly darker gray on hover */
 }
 
 
@@ -35,8 +40,10 @@ body {
 
 /* Makes the main category tabs look better */
 .nav-pills .nav-link.active {
-    background-color: #4bcc00; /* Green background for the active tab */
-    color: #fff !important; /* Forces the text to be white */
+    background-color: #4bcc00;
+    /* Green background for the active tab */
+    color: #fff !important;
+    /* Forces the text to be white */
 }
 
 /* Adds a hover effect to nav items in the header */
@@ -68,10 +75,14 @@ body {
  * always appear on top of the scrolling content.
  */
 thead.sticky-top th {
-    position: sticky;   /* Make the individual header cells sticky */
-    top: 0;             /* Stick them to the top of the screen */
-    background-color: #ffffff; /* Give them a solid background */
-    z-index: 10;        /* Ensure they are layered on top of everything else */
+    position: sticky;
+    /* Make the individual header cells sticky */
+    top: 0;
+    /* Stick them to the top of the screen */
+    background-color: #ffffff;
+    /* Give them a solid background */
+    z-index: 10;
+    /* Ensure they are layered on top of everything else */
 }
 
 
@@ -92,40 +103,53 @@ thead.sticky-top th {
 
 /* Login button style (light gray) */
 .btn-login {
-    background-color: #f8f9fa; /* Light gray background */
-    color: #343a40; /* Dark text */
-    border: 1px solid #dee2e6; /* Subtle border */
+    background-color: #f8f9fa;
+    /* Light gray background */
+    color: #343a40;
+    /* Dark text */
+    border: 1px solid #dee2e6;
+    /* Subtle border */
     font-weight: 600;
 }
+
 .btn-login:hover {
-    background-color: #e9ecef; /* Slightly darker on hover */
+    background-color: #e9ecef;
+    /* Slightly darker on hover */
 }
 
 /* Sign Up button style (vibrant green) */
 .btn-signup {
-    background-color: #4bcc00; /* Vibrant green background */
-    color: white; /* White text */
+    background-color: #4bcc00;
+    /* Vibrant green background */
+    color: white;
+    /* White text */
     border: none;
     font-weight: 600;
 }
+
 .btn-signup:hover {
-    filter: brightness(110%); /* Make it slightly brighter on hover */
+    filter: brightness(110%);
+    /* Make it slightly brighter on hover */
     background-color: #4bcc00;
 }
+
 /* Subscribe button in footer (FIXED) */
 .btn-subscribe {
-    background-color: #a5e57f; /* Lighter green background */
+    background-color: #a5e57f;
+    /* Lighter green background */
     color: black;
     font-weight: 600;
 }
+
 .btn-subscribe:hover {
     filter: brightness(105%);
-    background-color: #a5e57f; 
+    background-color: #a5e57f;
 }
 
 
 .pagination .page-item.active .page-link {
-    background-color: #eef2ff; /* A light blue for the current page */
+    background-color: #eef2ff;
+    /* A light blue for the current page */
     color: #4338ca;
 }
 
@@ -161,7 +185,8 @@ thead.sticky-top th {
 
 /* Custom CSS to match the CoinGecko look */
 .modal-content {
-    border-radius: 1rem; /* 16px */
+    border-radius: 1rem;
+    /* 16px */
     border: none;
 }
 
@@ -173,10 +198,12 @@ thead.sticky-top th {
     transition: all 0.15s ease-out;
     padding: 0.75rem 1rem;
 }
+
 .btn-sso:hover {
     background-color: #f8f9fa;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.07);
 }
+
 .btn-sso:active {
     transform: translateY(2px);
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -187,24 +214,30 @@ thead.sticky-top th {
     display: flex;
     align-items: center;
     text-align: center;
-    color: #6c757d; /* .text-muted */
+    color: #6c757d;
+    /* .text-muted */
 }
+
 .hr-divider::before,
 .hr-divider::after {
     content: '';
     flex: 1;
-    border-bottom: 1px solid #dee2e6; /* .border */
+    border-bottom: 1px solid #dee2e6;
+    /* .border */
 }
+
 .hr-divider:not(:empty)::before {
     margin-right: .5em;
 }
+
 .hr-divider:not(:empty)::after {
     margin-left: .5em;
 }
 
 /* Custom input style */
 .form-control-custom {
-    height: 3rem; /* 48px */
+    height: 3rem;
+    /* 48px */
     font-size: 1rem;
 }
 
