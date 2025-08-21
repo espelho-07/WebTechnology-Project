@@ -1,194 +1,317 @@
-/*
- * ===================================================
- * Custom Stylesheet for CoinGecko Bootstrap Conversion
- * ===================================================
- */
+    :root {
+      --cg-primary-500: #4bcc00;
+      --cg-primary-600: #4bcc00;
+      --cg-gray-800: #1f2937;
+      --cg-gray-50: #f9fafb;
+      --cg-gray-100: #f3f4f6;
+      --cg-gray-200: #e5e7eb;
+      --cg-gray-500: #6b7280;
+      --cg-gray-700: #374151;
+      --cg-gray-900: #111827;
+      --cg-slate-300: #cbd5e1;
+      --cg-slate-700: #334155;
+      --cg-slate-900: #0f172a;
+      --cg-yellow-500: #eab308;
+      --cg-danger-500: #ef4444;
+      --cg-success-500: #22c55e;
+      --cg-primary-100: #e8fcc9;
+      --cg-primary-400: #35af00;
+    }
 
-/* 1. CSS Variables for Theming
----------------------------------------------------- */
-:root {
-  --cg-primary-500: #8b5cf6;
-  --cg-primary-600: #7c3aed;
-  --cg-gray-800: #1f2937;
-  --cg-gray-50: #f9fafb;
-  --cg-gray-100: #f3f4f6;
-  --cg-gray-200: #e5e7eb;
-  --cg-gray-500: #6b7280;
-  --cg-gray-700: #374151;
-  --cg-gray-900: #111827;
-  --cg-slate-300: #cbd5e1;
-  --cg-slate-700: #334155;
-  --cg-slate-900: #0f172a;
-  --cg-yellow-500: #eab308;
-  --cg-danger-500: #ef4444;
-  --cg-success-500: #3bcc00; /* <<< UPDATED COLOR */
-}
+    [data-bs-theme="dark"] {
+      --cg-primary-400: #35af00;
+      --cg-primary-300: #c4b5fd;
+      --cg-primary-900: #4bcc00;
+      --cg-moon-50: #f0f2f5;
+      --cg-moon-200: #adb5bd;
+      --cg-moon-500: #6c757d;
+      --cg-moon-700: #343a40;
+      --cg-moon-800: #212529;
+      --cg-moon-900: #1c1c1c;
+      --cg-success-400: #4ade80;
+      --cg-primary-100: #e8fcc9;
 
-[data-bs-theme="dark"] {
-  --cg-primary-400: #a78bfa;
-  --cg-primary-300: #c4b5fd;
-  --cg-primary-900: #4c1d95;
-  --cg-moon-50: #f0f2f5;
-  --cg-moon-200: #adb5bd;
-  --cg-moon-500: #6c757d;
-  --cg-moon-700: #343a40;
-  --cg-moon-800: #212529;
-  --cg-moon-900: #1c1c1c;
-  --cg-success-400: #3bcc00; /* <<< UPDATED COLOR */
-}
+      .bg-custom-gray-800 {
+        background-color: var(--cg-moon-800) !important;
+      }
 
-/* 2. Dark Mode Overrides
----------------------------------------------------- */
-[data-bs-theme="dark"] body {
-    background-color: var(--cg-moon-900) !important;
-}
-[data-bs-theme="dark"] main, 
-[data-bs-theme="dark"] footer {
-    background-color: var(--cg-moon-900) !important;
-}
-[data-bs-theme="dark"] .bg-custom-gray-800 { background-color: var(--cg-moon-800) !important; }
-[data-bs-theme="dark"] .text-custom-gray-50 { color: var(--cg-moon-50) !important; }
-[data-bs-theme="dark"] .text-custom-slate-700 { color: var(--cg-moon-50) !important; }
-[data-bs-theme="dark"] a.text-custom-slate-700:hover { color: var(--cg-primary-400) !important; }
-[data-bs-theme="dark"] .text-custom-gray-500 { color: var(--cg-moon-200) !important; }
-[data-bs-theme="dark"] .text-custom-gray-700 { color: var(--cg-moon-50) !important; }
-[data-bs-theme="dark"] .text-custom-gray-900 { color: var(--cg-moon-50) !important; }
-[data-bs-theme="dark"] .btn-custom-secondary {
-    background-color: var(--cg-moon-800);
-    border-color: var(--cg-moon-500);
-    color: var(--cg-moon-50);
-}
-[data-bs-theme="dark"] .btn-custom-secondary:hover { background-color: var(--cg-moon-700); color: var(--cg-moon-50); }
-[data-bs-theme="dark"] .btn-custom-primary { background-color: var(--cg-primary-400); color: var(--cg-primary-900); border-color: var(--cg-primary-400); border-bottom-color: var(--cg-primary-300); box-shadow: 0 2px 0 0 var(--cg-primary-300);}
-[data-bs-theme="dark"] .btn-custom-primary:hover { background-color: var(--cg-primary-300); color: var(--cg-primary-900); }
-[data-bs-theme="dark"] .navbar, [data-bs-theme="dark"] header { background-color: var(--cg-moon-900) !important; }
-[data-bs-theme="dark"] .border-custom-gray-200 { border-color: var(--cg-moon-700) !important; }
-[data-bs-theme="dark"] .gecko-override-links-primary a { color: var(--cg-primary-400); }
-[data-bs-theme="dark"] .feature-icon { background-color: rgba(167, 139, 250, 0.1) !important; }
-[data-bs-theme="dark"] .text-custom-primary-700 { color: var(--cg-primary-400) !important; }
-[data-bs-theme="dark"] .nav-link { color: var(--cg-moon-50) !important; }
-[data-bs-theme="dark"] .footer-link { color: var(--cg-moon-200); }
-[data-bs-theme="dark"] .logo-light { display: none; }
-[data-bs-theme="dark"] .logo-dark { display: inline-block; }
-[data-bs-theme="dark"] .navbar-toggler-icon { 
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(240, 242, 245, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-[data-bs-theme="dark"] .input-group-text, [data-bs-theme="dark"] .form-control { background-color: var(--cg-moon-800); border-color: var(--cg-moon-700); }
-[data-bs-theme="dark"] .form-control::placeholder { color: var(--cg-moon-500); }
-[data-bs-theme="dark"] .form-control:focus { background-color: var(--cg-moon-800); color: var(--cg-moon-50); }
-[data-bs-theme="dark"] .input-group-text { color: var(--cg-moon-200); }
-[data-bs-theme="dark"] .gecko-up { color: var(--cg-success-400); }
+      .text-custom-gray-50 {
+        color: var(--cg-moon-50) !important;
+      }
 
+      .text-custom-slate-700 {
+        color: var(--cg-moon-50) !important;
+      }
 
-/* 3. General & Utility Classes
----------------------------------------------------- */
-body {
-  font-size: 0.875rem; /* 14px */
-}
-.fs-sm { font-size: 0.75rem !important; }
-.cursor-pointer { cursor: pointer; }
+      a.text-custom-slate-700:hover {
+        color: var(--cg-primary-400) !important;
+      }
 
-/* Custom colors */
-.bg-custom-gray-800 { background-color: var(--cg-gray-800) !important; }
-.text-custom-gray-50 { color: var(--cg-gray-50); }
-.text-custom-gray-500 { color: var(--cg-gray-500); }
-.text-custom-gray-700 { color: var(--cg-gray-700); }
-.text-custom-gray-900 { color: var(--cg-gray-900); }
-.text-custom-slate-700 { color: var(--cg-slate-700); }
-.text-primary-600 { color: var(--cg-primary-600) !important; }
-a.text-custom-slate-700 { text-decoration: none; }
-a.text-custom-slate-700:hover { color: var(--cg-primary-500); }
-.border-custom-gray-200 { border-color: var(--cg-gray-200) !important; }
+      .text-custom-gray-500 {
+        color: var(--cg-moon-200) !important;
+      }
 
-/* Thematic classes */
-.gecko-up { color: var(--cg-success-500); }
-.gecko-down { color: var(--cg-danger-500); }
-.fa-ethereum { color: #627eea; }
-.logo-dark { display: none; }
-.logo-light { display: inline-block; }
+      body {
+        background-color: var(--cg-moon-900) !important;
+      }
 
-.gecko-override-links-primary a {
-  color: var(--cg-primary-500);
-  text-decoration: none;
-}
-.py-3-5 {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-}
+      .btn-custom-secondary {
+        background-color: var(--cg-moon-800);
+        border-color: var(--cg-moon-500);
+        color: var(--cg-moon-50);
+      }
+
+      .btn-custom-secondary:hover {
+        background-color: var(--cg-moon-700);
+        color: var(--cg-moon-50);
+      }
+
+      .btn-custom-primary {
+        background-color: var(--cg-primary-400);
+        color: var(--cg-primary-900);
+      }
+
+      .btn-custom-primary:hover {
+        background-color: var(--cg-primary-300);
+        color: var(--cg-primary-900);
+      }
+
+      .navbar {
+        background-color: var(--cg-moon-900) !important;
+      }
+
+      .border-custom-gray-200 {
+        border-color: var(--cg-moon-700) !important;
+      }
+
+      .gecko-override-links-primary a {
+        color: var(--cg-primary-400);
+      }
+
+      main,
+      footer {
+        background-color: var(--cg-moon-900) !important;
+      }
+
+      .text-custom-gray-900 {
+        color: var(--cg-moon-50) !important;
+      }
+
+      .bg-custom-primary-100 {
+        background-color: var(--cg-primary-100) !important;
+      }
 
 
-/* 4. Component Styling
----------------------------------------------------- */
+      .text-custom-primary-700 {
+        color: var(--cg-primary-400) !important;
+      }
 
-/* Custom Buttons for 3D/shadow effect */
-.btn-custom {
-  border-bottom: 2px solid;
-  margin-bottom: 4px;
-  transition: all 0.15s ease-out;
-}
-.btn-custom:active {
-  transform: translateY(2px);
-  margin-bottom: 2px;
-  box-shadow: none !important;
-}
-.btn-custom-secondary {
-  background-color: #fff;
-  border: 2px solid var(--cg-slate-300);
-  border-top-width: 2px !important;
-  border-left-width: 2px !important;
-  border-right-width: 2px !important;
-  border-bottom-color: #a0aec0;
-  box-shadow: 0 2px 0 0 #a0aec0;
-  color: var(--cg-slate-900);
-}
-.btn-custom-secondary:hover { background-color: var(--cg-gray-100); }
-.btn-custom-primary {
-  background-color: var(--cg-primary-500);
-  color: white;
-  border: 2px solid var(--cg-primary-500);
-  border-bottom-color: var(--cg-primary-600);
-  box-shadow: 0 2px 0 0 var(--cg-primary-600);
-}
-.btn-custom-primary:hover { background-color: var(--cg-primary-600); color: white; }
+      .nav-link {
+        color: var(--cg-moon-50) !important;
+      }
 
-/* Navbar */
-.navbar { background-color: #fff; }
-.navbar .nav-link { color: var(--cg-gray-700); font-weight: 600; }
-.navbar .fa-star { color: var(--cg-yellow-500); }
-.navbar .form-control, .navbar .input-group-text {
-  border-radius: 0.5rem;
-}
-.navbar .form-control:focus {
-  box-shadow: none;
-  border-color: var(--cg-primary-500);
-}
+      .footer-link {
+        color: var(--cg-moon-200);
+      }
 
-/* Feature Icons */
-.feature-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ede9fe !important;
-  border-radius: 0.375rem; /* rounded-md */
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0; /* prevent shrinking */
-}
+      .text-custom-slate-50 {
+        color: var(--cg-moon-50) !important;
+      }
+    }
 
-/* Footer */
-.footer-link {
-  color: var(--cg-gray-500);
-  text-decoration: none;
-  font-size: 0.875rem;
-}
-.footer-link:hover { text-decoration: underline; }
-.footer-join-us {
-  background-color: #ede9fe;
-  color: #5b21b6;
-  padding: .125rem .375rem;
-  font-size: .75rem;
-  border-radius: .25rem;
-  font-weight: 500;
-  display: inline-block;
-  margin-left: 0.25rem;
-}
+    /* General Styling */
+    body {
+      background-color: #fff;
+      font-size: 0.875rem;
+      /* 14px */
+    }
+
+    .fs-sm {
+      font-size: 0.75rem !important;
+      /* 12px */
+    }
+
+    .text-custom-gray-800 {
+      color: var(--cg-gray-800);
+    }
+
+    .bg-custom-gray-800 {
+      background-color: var(--cg-gray-800) !important;
+    }
+
+    .text-custom-gray-50 {
+      color: var(--cg-gray-50);
+    }
+
+    .text-custom-slate-700 {
+      color: var(--cg-slate-700);
+    }
+
+    a.text-custom-slate-700 {
+      text-decoration: none;
+    }
+
+    a.text-custom-slate-700:hover {
+      color: var(--cg-primary-500);
+    }
+
+    .text-custom-gray-500 {
+      color: var(--cg-gray-500);
+    }
+
+    .text-custom-gray-900 {
+      color: var(--cg-gray-900);
+    }
+
+    .text-custom-slate-900 {
+      color: var(--cg-slate-900);
+    }
+
+    .text-custom-slate-50 {
+      color: #f8fafc;
+    }
+
+    .gecko-up {
+      color: var(--cg-success-500);
+    }
+
+    .gecko-down {
+      color: var(--cg-danger-500);
+    }
+
+    .fa-ethereum {
+      color: #627eea;
+    }
+
+    .border-custom-gray-200 {
+      border-color: var(--cg-gray-200) !important;
+    }
+
+    .bg-custom-primary-100 {
+      background-color: #e8fcc9 !important;
+    }
+
+    .text-custom-primary-700 {
+      color: #35af00 !important;
+    }
+
+    /* Custom Buttons for 3D effect */
+    .btn-custom {
+      border-bottom: 2px solid;
+      margin-bottom: 4px;
+      /* Simulates tw-mb-1 */
+      transition: all 0.15s ease-out;
+    }
+
+    .btn-custom:active {
+      transform: translateY(2px);
+      margin-bottom: 2px;
+      box-shadow: none !important;
+    }
+
+    .btn-custom-secondary {
+      background-color: #fff;
+      border: 2px solid var(--cg-slate-300);
+      border-top-width: 2px !important;
+      border-left-width: 2px !important;
+      border-right-width: 2px !important;
+      border-bottom-color: #a0aec0;
+      /* Darker shade for shadow */
+      box-shadow: 0 2px 0 0 #a0aec0;
+      color: var(--cg-slate-900);
+    }
+
+    .btn-custom-secondary:hover {
+      background-color: var(--cg-gray-100);
+    }
+
+    .btn-custom-primary {
+      background-color: var(--cg-primary-500);
+      color: white;
+      border: 2px solid var(--cg-primary-500);
+      border-bottom-color: #4bcc00;
+      /* Darker shade */
+      box-shadow: 0 2px 0 0 #35af00;
+    }
+
+    .btn-custom-primary:hover {
+      background-color: var(--cg-primary-600);
+      color: white;
+    }
+
+    /* Navbar Specifics */
+    .navbar {
+      background-color: #fff;
+    }
+
+    .navbar .nav-link {
+      color: var(--cg-gray-700);
+      font-weight: 600;
+    }
+
+    .navbar .fa-star {
+      color: var(--cg-yellow-500);
+    }
+
+    /* remove the default Bootstrap dropdown arrow */
+    .dropdown-toggle::after {
+      display: none !important;
+    }
+
+    /* show dropdown on hover instead of click */
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0;
+      /* keeps it aligned */
+    }
+
+    /* change color on hover */
+    .dropdown:hover .nav-link,
+    .dropdown:hover .dropdown-toggle {
+      color: #35af00 !important;
+      /* green */
+    }
+
+
+
+    /* Main Content Styling */
+    .gecko-override-links-primary a {
+      color: var(--cg-primary-500);
+      text-decoration: none;
+    }
+
+    .text-primary-600 {
+      color: var(--cg-primary-600) !important;
+    }
+
+    /* Footer */
+    .footer-link {
+      color: var(--cg-gray-500);
+      text-decoration: none;
+      font-size: 0.875rem;
+    }
+
+    .footer-link:hover {
+      text-decoration: underline;
+    }
+
+    .footer-join-us {
+      background-color: #e8fcc9;
+      color: #4bcc00;
+      padding: .125rem .375rem;
+      font-size: .75rem;
+      border-radius: .25rem;
+      font-weight: 500;
+    }
+
+    .btn-subscribe {
+      background-color: #a5e57f;
+      /* Lighter green background */
+      color: rgb(255, 255, 255);
+      font-weight: 600;
+    }
+
+    .btn-subscribe:hover {
+      filter: brightness(105%);
+      background-color: #4bcc00;
+    }
