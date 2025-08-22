@@ -1,157 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoinGecko Premium | Bootstrap Conversion</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
+    <title>Crypto Companion Page | Bootstrap Conversion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
-        /* A little custom styling to match the original's feel */
-        body {
-            background-color: #f8f9fa;
-        }
+        /* A little custom style to better match the original design's spacing */
         .section-spacer {
-            padding-top: 5rem;
-            padding-bottom: 5rem;
+            margin-top: 6rem;
+            margin-bottom: 6rem;
         }
-        .pricing-card {
-            transition: all 0.3s ease-in-out;
+
+        /* --- Logo Slider CSS --- */
+
+
+
+        /* Main slider container */
+        .logo-slider {
+            overflow: hidden;
+            padding: 40px 0;
+            background: white;
+            position: relative;
         }
-        .pricing-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+
+        /* Fade-out effect on the sides */
+        .logo-slider::before,
+        .logo-slider::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 200px;
+            height: 100%;
+            z-index: 2;
+        }
+
+        .logo-slider::before {
+            left: 0;
+            background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+        }
+
+        .logo-slider::after {
+            right: 0;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+        }
+
+        /* The track that holds and animates the logos */
+        .logo-track {
+            display: flex;
+            width: fit-content;
+            /* Adjust width to content */
+        }
+
+        .logo-track img {
+            height: 50px;
+            /* Taller logos */
+            margin: 0 40px;
+            /* Space between logos */
+            filter: none;
+            opacity: 1;
+        }
+
+        /* Apply animations to the rows */
+        /* Apply same animation for both rows */
+        .row1,
+        .row2 {
+            animation: scroll-left 10s linear infinite;
+        }
+
+        /* Keyframes for the scrolling animation */
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
         }
     </style>
 </head>
+
 <body>
 
     <main class="container">
+        <div class="d-flex flex-column align-items-center my-5 pt-5 text-center">
+            <img class="img-fluid" style="max-height: 466px;"
+                src="https://static.coingecko.com/s/landing_pages/mobile/light/1_hero-f06eb03c57ff9627f2b8fe87903b6f00e3fc8b613fea9bf13ba2f7c6e421b6de.png"
+                alt="CoinGecko App Hero Image">
 
-        <div class="section-spacer">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6 text-center">
-                    <img class="img-fluid" style="max-width: 500px;" src="https://static.coingecko.com/s/gecko_level_up-2fbce85b6bf235424bd9fb7f27c1b0e913f524f38088afcafbefc192dd3259fa.png" alt="Gecko Level Up">
-                </div>
-                <div class="col-lg-6 text-center text-lg-start">
-                    <h1 class="display-4 fw-bold mb-3">
-                        Level up your crypto journey - Go Ad-Free with <span class="text-primary">CoinGecko Premium</span>.
-                    </h1>
-                    <p class="lead text-muted mb-4">
-                        As low as <b>$10 a month</b>. Subscribe today. <a href="/en/premium_terms" target="_blank">T&C</a> apply.
-                    </p>
-                    <a href="#pricing-plans" class="btn btn-primary btn-lg px-5 py-3">
-                        Upgrade to Premium
+            <h1 class="display-5 display-md-2 fw-bold mt-4" style="max-width: 600px;">
+                Meet your <span class="" style="color: #4bcc00">on-the-go</span> crypto companion
+            </h1>
+
+            <div class="d-flex flex-column align-items-center mt-4">
+                <div class="d-flex justify-content-center gap-2 mb-2">
+                    <a target="_blank" rel="nofollow noopener" href="https://coingecko.app.link/landing-android">
+                        <img alt="Google Play Store Button" style="height: 60px;"
+                            src="https://static.coingecko.com/s/coingecko_logos/google_play_store-cb1f298b04afa7f74639a948d9b2e22e4aa6eea9486a2b0442c2cf9bdcda63e8.svg">
                     </a>
-                </div>
-            </div>
-        </div>
-
-        <div id="pricing-plans" class="section-spacer">
-            <div class="text-center">
-                <h2 class="display-5 fw-bold mb-4">Select your preferred plan</h2>
-            </div>
-            <div class="row justify-content-center align-items-stretch g-4 g-lg-5 pt-4">
-                
-                <div class="col-md-6 col-lg-5">
-                    <div class="card h-100 p-4 rounded-4 shadow-sm pricing-card">
-                        <div class="card-body d-flex flex-column text-center">
-                            <h3 class="h4 fw-bold">Monthly</h3>
-                            <p class="text-muted mb-4">$10 billed monthly.</p>
-                            
-                            <p class="card-title pricing-card-title my-4">
-                                <span class="display-4 fw-bold">$10</span>
-                                <span class="text-muted fw-semibold">/month</span>
-                            </p>
-                            
-                            <a href="#" class="btn btn-outline-primary btn-lg w-100 mt-auto">Subscribe Now</a>
-                        </div>
-                    </div>
+                    <a target="_blank" rel="nofollow noopener" href="https://coingecko.app.link/landing-ios">
+                        <img alt="Apple App Store Button" style="height: 60px;"
+                            src="https://static.coingecko.com/s/coingecko_logos/apple_app_store-558245a688cc13737dfb861fd82b252d75d5afbaf343c06e3067a454675bbe05.svg">
+                    </a>
+                    <img src="https://static.coingecko.com/s/landing_pages/mobile_app_qr_code-503a3393ccc355a8c41ea1a4026c31db469665b66c47847b347e2447c80feea3.svg"
+                        alt="App QR Code" class="img-fluid d-none d-lg-block border p-1 rounded"
+                        style="max-height:60px;">
                 </div>
 
-                <div class="col-md-6 col-lg-5">
-                    <div class="card h-100 p-4 rounded-4 shadow-sm pricing-card border-primary border-3 position-relative">
-                        <span class="position-absolute top-0 start-50 translate-middle badge bg-primary rounded-pill px-3 py-2 fs-6">
-                            Get 2 months free!
-                        </span>
-                        <div class="card-body d-flex flex-column text-center">
-                            <h3 class="h4 fw-bold">Yearly</h3>
-                            <p class="text-muted mb-4"><span class="text-decoration-line-through">$120</span> <b>$99.90</b> billed every 12 months.</p>
-
-                            <p class="card-title pricing-card-title my-4">
-                                <span class="display-4 fw-bold">$99.90</span>
-                                <span class="text-muted fw-semibold">/year</span>
-                            </p>
-                            
-                            <p class="text-muted mb-4">$8.32/month</p>
-
-                            <a href="#" class="btn btn-primary btn-lg w-100 mt-auto">Subscribe Now</a>
-                        </div>
-                    </div>
+                <div class="d-flex align-items-center text-muted">
+                    <p class="mb-0">Rated 4.8</p>
+                    <i class="fas fa-star text-warning mx-1" style="font-size: 0.8rem;"></i>
+                    <p class="mb-0">by over 2 million crypto investors</p>
                 </div>
             </div>
-            <p class="text-center text-muted small mt-4">Prices are exclusive of taxes. The applicable tax amounts will be shown on the checkout page.</p>
         </div>
 
         <div class="section-spacer">
             <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold">What you'll get</h2>
-                <p class="lead text-muted">
-                    Monitor the crypto markets distraction-free and stay ahead of the curve. Support independent data for the crypto space! 😎
-                </p>
+                <h2 class="display-4 fw-bold">The crypto world is in your hands</h2>
+                <p class="lead text-muted">Access the largest collection of unbiased crypto market data, insights, news
+                    and tools in one place. All for free.</p>
             </div>
-            <div class="row g-5 text-center">
-                <div class="col-md-6 col-lg-4">
-                    <img class="mb-3" src="https://static.coingecko.com/s/landing_pages/premium/1_ad_free-353b2380d6a97ffa869792e245fa090e31b7e6c5305829f69408edb5c6f4b755.png" alt="Ad-Free" style="max-width: 250px;">
-                    <p class="text-muted"><b>Ad-free CoinGecko web</b>, mobile app, and newsletter</p>
+
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <img src="https://static.coingecko.com/s/landing_pages/mobile/light/2a_coins-f875c3ce9094e4cf6f7777b89f4633c151d7360983ea783db7c11a7ed256524c.png"
+                            class="card-img-top rounded-top-4" alt="Real-time Coin Prices">
+                        <div class="card-body p-4">
+                            <h3 class="card-title h4 fw-bold">Real-time Coin Prices</h3>
+                            <p class="card-text text-muted">over 16,000+ cryptocurrencies tracked across 200+ chains</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <img class="mb-3" src="https://static.coingecko.com/s/landing_pages/premium/2_candy-f5444f28f969f2be919c88aea32c0c7f517907910761e5a4eaf9bb89c185c9b6.png" alt="More Candy" style="max-width: 250px; height: 250px; object-fit: contain;">
-                    <p class="text-muted"><strong>More candy!</strong> Get an additional 1.2x candy boost everyday</p>
+                <div class="col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <img src="https://static.coingecko.com/s/landing_pages/mobile/light/2b_nfts-64e1a6e04d9646b284cfc09922030456a70d92636e23923b33b1b67a20deb448.png"
+                            class="card-img-top rounded-top-4" alt="Powerful NFT tracker">
+                        <div class="card-body p-4">
+                            <h3 class="card-title h4 fw-bold">Powerful NFT tracker</h3>
+                            <p class="card-text text-muted">Discover the top NFT collections from 10+ blockchains, all
+                                in one app</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <img class="mb-3" src="https://static.coingecko.com/s/landing_pages/premium/3_nft-740de9c8b61196e6198d8798ef2b0146e514afa56f99b4c2be79afb6541cd0ee.png" alt="Premium NFT" style="max-width: 250px;">
-                    <p class="text-muted">Exclusive <strong>CoinGecko Premium NFT</strong></p>
+                <div class="col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <img src="https://static.coingecko.com/s/landing_pages/mobile/light/2c_exchanges-7692b38de6ade23e90c10110cc41caca9237cd899678a713fd2dcb25eba3de51.png"
+                            class="card-img-top rounded-top-4" alt="Trusted Exchanges">
+                        <div class="card-body p-4">
+                            <h3 class="card-title h4 fw-bold">Trusted Exchanges</h3>
+                            <p class="card-text text-muted">Over 1000+ exchanges, ranked based on CoinGecko’s
+                                proprietary trust score</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <img class="mb-3" src="https://static.coingecko.com/s/landing_pages/premium/5_newsletter-dc65b8770462770fdc6163ad5fd3a055ef88e9e88a9887b0d0f2a16f98b1bc61.png" alt="Premium Newsletter" style="max-width: 250px;">
-                    <p class="text-muted"><strong>Premium Newsletter</strong> - Exclusive insights and trends delivered directly to your inbox.</p>
+            </div>
+        </div>
+
+        <div class="section-spacer text-center" style="margin-left: 10%; margin-right: 10%;">
+            <h1 class="display-4 fw-bold mb-5">Powering Crypto’s Biggest Names</h1>
+            <div class="logo-slider">
+                <div class="logo-track row1">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/metamask-198e9b45007340aa2067.png"
+                        alt="Metamask">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/etherscan-a1053f781e91d1cddf76.png"
+                        alt="Etherscan">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/cro-a22a40aee9b07691355a.png"
+                        alt="Crypto.com">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/ledger-c99b76f1e05fb4f40a95.png"
+                        alt="Ledger">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/nansen-651565e8c7cdabb94658.png"
+                        alt="Nansen">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/arkham-576663b36357c3c38919.png"
+                        alt="Arkham">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/kraken-69d978ead2f1bdeb3c3f.png"
+                        alt="Kraken">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/metamask-198e9b45007340aa2067.png"
+                        alt="Metamask">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/etherscan-a1053f781e91d1cddf76.png"
+                        alt="Etherscan">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/cro-a22a40aee9b07691355a.png"
+                        alt="Crypto.com">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/ledger-c99b76f1e05fb4f40a95.png"
+                        alt="Ledger">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/nansen-651565e8c7cdabb94658.png"
+                        alt="Nansen">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/arkham-576663b36357c3c38919.png"
+                        alt="Arkham">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/kraken-69d978ead2f1bdeb3c3f.png"
+                        alt="Kraken">
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <img class="mb-3" src="https://static.coingecko.com/s/landing_pages/premium/6_books-83c761f55fbf592861e1fb33f2ca381dfc3ca703c76ff658cec5d73a1bb36d0b.png" alt="Free Books" style="max-width: 250px;">
-                    <p class="text-muted"><strong>Free CoinGecko books</strong> including How to Bitcoin and How to NFT</p>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <img class="mb-3" src="https://static.coingecko.com/s/landing_pages/premium/8_love-580300aa7e8c91b9ba99d5ad60890600525b3e5164c8e2309962eeb3e09acf47.png" alt="Our Appreciation" style="max-width: 250px;">
-                    <p class="text-muted"><b>Our appreciation -</b> sincerely, from all of us at CoinGecko.</p>
+                <div class="logo-track row2 mt-4">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/uni-f1aa65bc792be4cab126.png"
+                        alt="Uniswap">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/phantom-b51e2aa3d5784ade256d.png"
+                        alt="Phantom">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/exodus-7b3962382b876e78bb9a.png"
+                        alt="Exodus">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/rainbow-214ede1f13cf2ca88ed6.png"
+                        alt="Rainbow">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/supra-0f664c5943c394bf378d.png"
+                        alt="Supra">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/bybit-0e7ef2c5fa0fcb739790.png"
+                        alt="Bybit">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/chainlink-b6f26b992b61e27901b0.png"
+                        alt="Chainlink">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/uni-f1aa65bc792be4cab126.png"
+                        alt="Uniswap">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/phantom-b51e2aa3d5784ade256d.png"
+                        alt="Phantom">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/exodus-7b3962382b876e78bb9a.png"
+                        alt="Exodus">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/rainbow-214ede1f13cf2ca88ed6.png"
+                        alt="Rainbow">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/supra-0f664c5943c394bf378d.png"
+                        alt="Supra">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/bybit-0e7ef2c5fa0fcb739790.png"
+                        alt="Bybit">
+                    <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/chainlink-b6f26b992b61e27901b0.png"
+                        alt="Chainlink">
                 </div>
             </div>
         </div>
 
         <div class="section-spacer">
-            <h2 class="display-6 fw-bold mb-5">Frequently Asked Questions</h2>
-            <div class="border-top">
-                <div class="row py-4">
-                    <div class="col-md-5 fw-semibold">What are my payment options?</div>
-                    <div class="col-md-7 text-muted mt-2 mt-md-0">Stripe handles the payment process for us. Acceptable payment methods include all major credit cards supported by Stripe.</div>
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold">Never miss a beat</h2>
+                <p class="lead text-muted">Access the largest collection of unbiased crypto market data, insights, news
+                    and tools in one place. All for free.</p>
+            </div>
+            <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <img src="https://static.coingecko.com/s/landing_pages/mobile/light/3a_categories-63c90d9d410780097acf77cb84ca9be3638c812e396c4b8ead251162b7bfec1b.png"
+                            class="card-img-top rounded-top-4" alt="Discover Categories">
+                        <div class="card-body p-4">
+                            <h3 class="card-title h4 fw-bold">Discover Categories</h3>
+                            <p class="card-text text-muted">Find the latest crypto trends and narratives, curated by the
+                                CoinGecko team</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="row py-4 border-top">
-                    <div class="col-md-5 fw-semibold">I would like to cancel my subscription. How should I go about that?</div>
-                    <div class="col-md-7 text-muted mt-2 mt-md-0">In order to cancel your subscription, you may head over to Subscription page under your account, and click on "Cancel Plan".</div>
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <img src="https://static.coingecko.com/s/landing_pages/mobile/light/3b_portfolio-784fe36b375ed8cc30cf0aa455207286ec1fc7629b34679d1493691424905858.png"
+                            class="card-img-top rounded-top-4" alt="Portfolio on-the-go">
+                        <div class="card-body p-4">
+                            <h3 class="card-title h4 fw-bold">Portfolio on-the-go</h3>
+                            <p class="card-text text-muted">Create as many portfolios as you need, synced across all
+                                your devices</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="row py-4 border-top">
-                    <div class="col-md-5 fw-semibold">Will I be notified for my subscription renewal?</div>
-                    <div class="col-md-7 text-muted mt-2 mt-md-0">Yes, you will be notified via email. Depending on the setting you have selected - Stripe's payment processing may charge you automatically for the next billing cycle and extend your subscription with us. Note that your subscription will remain active for the duration of the paid period.</div>
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <img src="https://static.coingecko.com/s/landing_pages/mobile/light/3c_price_alerts-929c0f75fce62e7a0605a7290dd7512c4c9a45b1fbdbec80dee331247f8ebc43.png"
+                            class="card-img-top rounded-top-4" alt="Custom Price Alerts">
+                        <div class="card-body p-4">
+                            <h3 class="card-title h4 fw-bold">Custom Price Alerts</h3>
+                            <p class="card-text text-muted">Set up one-time or recurring alerts for all your favorite
+                                Coins and NFTs</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="row py-4 border-top">
-                    <div class="col-md-5 fw-semibold">What is your refund policy?</div>
-                    <div class="col-md-7 text-muted mt-2 mt-md-0">Subscriptions are non-refundable.</div>
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <img src="https://static.coingecko.com/s/landing_pages/mobile/light/3d_news-a5c5196e93a0c6f89cd0b1d24612b8495adac0e76fddf881a1567c0b2a504c81.png"
+                            class="card-img-top rounded-top-4" alt="Latest Crypto News">
+                        <div class="card-body p-4">
+                            <h3 class="card-title h4 fw-bold">Latest Crypto News</h3>
+                            <p class="card-text text-muted">Stay on top of the crypto market with news tailored to your
+                                portfolio</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <img src="https://static.coingecko.com/s/landing_pages/mobile/light/3e_candy-227d2695f50b315b9168f674cfaea6dc1b386afac3ffdc3c401478fae77af6d6.png"
+                            class="card-img-top rounded-top-4" alt="Rewards with Candy">
+                        <div class="card-body p-4">
+                            <h3 class="card-title h4 fw-bold">Rewards with Candy</h3>
+                            <p class="card-text text-muted">Collect candy and swap them for exclusive rewards - NFTs,
+                                discounts, and more!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <img src="https://static.coingecko.com/s/landing_pages/mobile/light/3f_widgets-55d47bd4177ed624b79bcec263bcd7f8753f1632e203530a2e5f8d25d75aae69.png"
+                            class="card-img-top rounded-top-4" alt="Powerful Widgets">
+                        <div class="card-body p-4">
+                            <h3 class="card-title h4 fw-bold">Powerful Widgets</h3>
+                            <p class="card-text text-muted">Stay updated on vital market information directly on your
+                                home screen</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
+        <div class="section-spacer">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold">Don’t just take our word for it</h2>
+                <p class="lead text-muted">Here’s what real crypto users have to say about the CoinGecko mobile app</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <blockquote class="twitter-tweet" data-conversation="none" data-theme="light">
+                        <p lang="en" dir="ltr">I'm in love with the feel of my updated CoinGecko App. 💚🦎</p>&mdash;
+                        Mint² (@_0xNomad) <a
+                            href="https://twitter.com/_0xNomad/status/1762236709033447586?ref_src=twsrc%5Etfw">February
+                            26, 2024</a>
+                    </blockquote>
+                    <blockquote class="twitter-tweet" data-conversation="none" data-theme="light">
+                        <p lang="en" dir="ltr">My favorite app of the week is <a
+                                href="https://twitter.com/coingecko?ref_src=twsrc%5Etfw">@coingecko</a>. Those activity
+                            alerts are the best.</p>&mdash; noordinarygirl.dfz (@DCnfts_) <a
+                            href="https://twitter.com/DCnfts_/status/1736007664583262320?ref_src=twsrc%5Etfw">December
+                            16, 2023</a>
+                    </blockquote>
+                </div>
+                <div class="col-lg-6">
+                    <blockquote class="twitter-tweet" data-conversation="none" data-theme="light">
+                        <p lang="en" dir="ltr">Coingecko is my go to app and is my crypto google. Can't imagine without
+                            it. Tracks portfolio, gets <br>publications, resources, exchange info, live rates..Simply
+                            its all in one.. Can't ask for more.<br>Happy anniversary <a
+                                href="https://twitter.com/hashtag/CoinGecko?src=hash&amp;ref_src=twsrc%5Etfw">#CoinGecko</a>
+                            <a
+                                href="https://twitter.com/hashtag/GeckoLove?src=hash&amp;ref_src=twsrc%5Etfw">#GeckoLove</a>
+                            <a href="https://twitter.com/zelani_A?ref_src=twsrc%5Etfw">@zelani_A</a> <a
+                                href="https://twitter.com/atifmohammadat?ref_src=twsrc%5Etfw">@atifmohammadat</a> <a
+                                href="https://twitter.com/Myself_Asim?ref_src=twsrc%5Etfw">@Myself_Asim</a>
+                        </p>&mdash;
+                        Setty (@Setty311) <a
+                            href="https://twitter.com/Setty311/status/1512551460843622402?ref_src=twsrc%5Etfw">April 8,
+                            2022</a>
+                    </blockquote>
+                    <blockquote class="twitter-tweet" data-conversation="none" data-theme="light">
+                        <p lang="en" dir="ltr">I love how easy it is to track real-time prices and trends. The interface
+                            is super user-friendly too!</p>&mdash; Kenneth_TCG 🔸 (@Kenneth_TCG) <a
+                            href="https://twitter.com/Kenneth_TCG/status/1889649071670853989?ref_src=twsrc%5Etfw">February
+                            12, 2025</a>
+                    </blockquote>
+                </div>
+            </div>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+
+        <div class="section-spacer">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold">Available where you are</h2>
+                <p class="lead text-muted">With support for 25+ languages and 50+ local currencies</p>
+            </div>
+
+            <img class="img-fluid d-none d-md-block"
+                src="https://static.coingecko.com/s/landing_pages/mobile/light/4_localisation-62feea6c75ffe4f82b75ec09120870e5f8f7c542b5132e06a2965f6d54f42cac.png"
+                alt="World Map">
+            <img class="img-fluid d-md-none"
+                src="https://static.coingecko.com/s/landing_pages/mobile/mobile_4_localisation-3d8edc65ad8d58a2c3fa5f73674ec675466ba1233fee9170149aa3ae4028e4fc.png"
+                alt="World Map Mobile">
+
+            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2 my-4">
+                <a target="_blank" rel="nofollow noopener" href="https://coingecko.app.link/landing-android">
+                    <img alt="Google Play Store Button" style="height: 60px;"
+                        src="https://static.coingecko.com/s/coingecko_logos/google_play_store-cb1f298b04afa7f74639a948d9b2e22e4aa6eea9486a2b0442c2cf9bdcda63e8.svg">
+                </a>
+                <a target="_blank" rel="nofollow noopener" href="https://coingecko.app.link/landing-ios">
+                    <img alt="Apple App Store Button" style="height: 60px;"
+                        src="https://static.coingecko.com/s/coingecko_logos/apple_app_store-558245a688cc13737dfb861fd82b252d75d5afbaf343c06e3067a454675bbe05.svg">
+                </a>
+            </div>
+
+            <p class="text-center text-muted small">Get the CoinGecko app from the App store, Play store, or download
+                the .apk file.</p>
+        </div>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
