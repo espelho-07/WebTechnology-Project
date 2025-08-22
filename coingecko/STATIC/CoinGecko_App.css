@@ -1,0 +1,72 @@
+ /* A little custom style to better match the original design's spacing */
+ .section-spacer {
+     margin-top: 6rem;
+     margin-bottom: 6rem;
+ }
+
+ /* --- Logo Slider CSS --- */
+
+
+
+ /* Main slider container */
+ .logo-slider {
+     overflow: hidden;
+     padding: 40px 0;
+     background: white;
+     position: relative;
+ }
+
+ /* Fade-out effect on the sides */
+ .logo-slider::before,
+ .logo-slider::after {
+     content: "";
+     position: absolute;
+     top: 0;
+     width: 200px;
+     height: 100%;
+     z-index: 2;
+ }
+
+ .logo-slider::before {
+     left: 0;
+     background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+ }
+
+ .logo-slider::after {
+     right: 0;
+     background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+ }
+
+ /* The track that holds and animates the logos */
+ .logo-track {
+     display: flex;
+     width: fit-content;
+     /* Adjust width to content */
+ }
+
+ .logo-track img {
+     height: 50px;
+     /* Taller logos */
+     margin: 0 40px;
+     /* Space between logos */
+     filter: none;
+     opacity: 1;
+ }
+
+ /* Apply animations to the rows */
+ /* Apply same animation for both rows */
+ .row1,
+ .row2 {
+     animation: scroll-left 10s linear infinite;
+ }
+
+ /* Keyframes for the scrolling animation */
+ @keyframes scroll-left {
+     0% {
+         transform: translateX(0%);
+     }
+
+     100% {
+         transform: translateX(-50%);
+     }
+ }

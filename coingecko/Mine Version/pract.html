@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoinGecko Premium | Bootstrap Conversion</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <style>
+        /* A little custom styling to match the original's feel */
+        body {
+            background-color: #f8f9fa;
+        }
+        .section-spacer {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+        .pricing-card {
+            transition: all 0.3s ease-in-out;
+        }
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+
+        <div class="section-spacer">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 text-center">
+                    <img class="img-fluid" style="max-width: 500px;" src="https://static.coingecko.com/s/gecko_level_up-2fbce85b6bf235424bd9fb7f27c1b0e913f524f38088afcafbefc192dd3259fa.png" alt="Gecko Level Up">
+                </div>
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h1 class="display-4 fw-bold mb-3">
+                        Level up your crypto journey - Go Ad-Free with <span class="text-primary">CoinGecko Premium</span>.
+                    </h1>
+                    <p class="lead text-muted mb-4">
+                        As low as <b>$10 a month</b>. Subscribe today. <a href="/en/premium_terms" target="_blank">T&C</a> apply.
+                    </p>
+                    <a href="#pricing-plans" class="btn btn-primary btn-lg px-5 py-3">
+                        Upgrade to Premium
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="pricing-plans" class="section-spacer">
+            <div class="text-center">
+                <h2 class="display-5 fw-bold mb-4">Select your preferred plan</h2>
+            </div>
+            <div class="row justify-content-center align-items-stretch g-4 g-lg-5 pt-4">
+                
+                <div class="col-md-6 col-lg-5">
+                    <div class="card h-100 p-4 rounded-4 shadow-sm pricing-card">
+                        <div class="card-body d-flex flex-column text-center">
+                            <h3 class="h4 fw-bold">Monthly</h3>
+                            <p class="text-muted mb-4">$10 billed monthly.</p>
+                            
+                            <p class="card-title pricing-card-title my-4">
+                                <span class="display-4 fw-bold">$10</span>
+                                <span class="text-muted fw-semibold">/month</span>
+                            </p>
+                            
+                            <a href="#" class="btn btn-outline-primary btn-lg w-100 mt-auto">Subscribe Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-5">
+                    <div class="card h-100 p-4 rounded-4 shadow-sm pricing-card border-primary border-3 position-relative">
+                        <span class="position-absolute top-0 start-50 translate-middle badge bg-primary rounded-pill px-3 py-2 fs-6">
+                            Get 2 months free!
+                        </span>
+                        <div class="card-body d-flex flex-column text-center">
+                            <h3 class="h4 fw-bold">Yearly</h3>
+                            <p class="text-muted mb-4"><span class="text-decoration-line-through">$120</span> <b>$99.90</b> billed every 12 months.</p>
+
+                            <p class="card-title pricing-card-title my-4">
+                                <span class="display-4 fw-bold">$99.90</span>
+                                <span class="text-muted fw-semibold">/year</span>
+                            </p>
+                            
+                            <p class="text-muted mb-4">$8.32/month</p>
+
+                            <a href="#" class="btn btn-primary btn-lg w-100 mt-auto">Subscribe Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-muted small mt-4">Prices are exclusive of taxes. The applicable tax amounts will be shown on the checkout page.</p>
+        </div>
+
+        <div class="section-spacer">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">What you'll get</h2>
+                <p class="lead text-muted">
+                    Monitor the crypto markets distraction-free and stay ahead of the curve. Support independent data for the crypto space! 😎
+                </p>
+            </div>
+            <div class="row g-5 text-center">
+                <div class="col-md-6 col-lg-4">
+                    <img class="mb-3" src="https://static.coingecko.com/s/landing_pages/premium/1_ad_free-353b2380d6a97ffa869792e245fa090e31b7e6c5305829f69408edb5c6f4b755.png" alt="Ad-Free" style="max-width: 250px;">
+                    <p class="text-muted"><b>Ad-free CoinGecko web</b>, mobile app, and newsletter</p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <img class="mb-3" src="https://static.coingecko.com/s/landing_pages/premium/2_candy-f5444f28f969f2be919c88aea32c0c7f517907910761e5a4eaf9bb89c185c9b6.png" alt="More Candy" style="max-width: 250px; height: 250px; object-fit: contain;">
+                    <p class="text-muted"><strong>More candy!</strong> Get an additional 1.2x candy boost everyday</p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <img class="mb-3" src="https://static.coingecko.com/s/landing_pages/premium/3_nft-740de9c8b61196e6198d8798ef2b0146e514afa56f99b4c2be79afb6541cd0ee.png" alt="Premium NFT" style="max-width: 250px;">
+                    <p class="text-muted">Exclusive <strong>CoinGecko Premium NFT</strong></p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <img class="mb-3" src="https://static.coingecko.com/s/landing_pages/premium/5_newsletter-dc65b8770462770fdc6163ad5fd3a055ef88e9e88a9887b0d0f2a16f98b1bc61.png" alt="Premium Newsletter" style="max-width: 250px;">
+                    <p class="text-muted"><strong>Premium Newsletter</strong> - Exclusive insights and trends delivered directly to your inbox.</p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <img class="mb-3" src="https://static.coingecko.com/s/landing_pages/premium/6_books-83c761f55fbf592861e1fb33f2ca381dfc3ca703c76ff658cec5d73a1bb36d0b.png" alt="Free Books" style="max-width: 250px;">
+                    <p class="text-muted"><strong>Free CoinGecko books</strong> including How to Bitcoin and How to NFT</p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <img class="mb-3" src="https://static.coingecko.com/s/landing_pages/premium/8_love-580300aa7e8c91b9ba99d5ad60890600525b3e5164c8e2309962eeb3e09acf47.png" alt="Our Appreciation" style="max-width: 250px;">
+                    <p class="text-muted"><b>Our appreciation -</b> sincerely, from all of us at CoinGecko.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-spacer">
+            <h2 class="display-6 fw-bold mb-5">Frequently Asked Questions</h2>
+            <div class="border-top">
+                <div class="row py-4">
+                    <div class="col-md-5 fw-semibold">What are my payment options?</div>
+                    <div class="col-md-7 text-muted mt-2 mt-md-0">Stripe handles the payment process for us. Acceptable payment methods include all major credit cards supported by Stripe.</div>
+                </div>
+                <div class="row py-4 border-top">
+                    <div class="col-md-5 fw-semibold">I would like to cancel my subscription. How should I go about that?</div>
+                    <div class="col-md-7 text-muted mt-2 mt-md-0">In order to cancel your subscription, you may head over to Subscription page under your account, and click on "Cancel Plan".</div>
+                </div>
+                <div class="row py-4 border-top">
+                    <div class="col-md-5 fw-semibold">Will I be notified for my subscription renewal?</div>
+                    <div class="col-md-7 text-muted mt-2 mt-md-0">Yes, you will be notified via email. Depending on the setting you have selected - Stripe's payment processing may charge you automatically for the next billing cycle and extend your subscription with us. Note that your subscription will remain active for the duration of the paid period.</div>
+                </div>
+                <div class="row py-4 border-top">
+                    <div class="col-md-5 fw-semibold">What is your refund policy?</div>
+                    <div class="col-md-7 text-muted mt-2 mt-md-0">Subscriptions are non-refundable.</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>

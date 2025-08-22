@@ -20,6 +20,67 @@
             border-top: 1px solid #e9ecef;
             opacity: 0.5;
         }
+
+
+        .logo-slider {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .logo-track {
+            display: flex;
+            width: max-content;
+            animation: scroll 5s linear infinite;
+        }
+
+        .logo-track img {
+            height: 60px;
+            margin: 0 20px;
+        }
+
+        .row1 {
+            margin-bottom: 20px;
+            /* space between row1 and row2 */
+        }
+
+        .row2 {
+            margin-top: 20px;
+            /* separate line look */
+        }
+
+        .logo-slider::before,
+        .logo-slider::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 100px;
+            /* adjust fade width */
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .logo-slider::before {
+            left: 0;
+            background: linear-gradient(to right, white, transparent);
+        }
+
+        .logo-slider::after {
+            right: 0;
+            background: linear-gradient(to left, white, transparent);
+        }
+
+        /* Animation */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
     </style>
 </head>
 
@@ -251,27 +312,189 @@
                 <img class="img-fluid" loading="lazy"
                     src="https://static.coingecko.com/s/landing_pages/mobile/light/1_hero-f06eb03c57ff9627f2b8fe87903b6f00e3fc8b613fea9bf13ba2f7c6e421b6de.png"
                     class="figure-img img-fluid rounded" alt="Mobile Phone">
-                <h1 class="fw-bold">Also available on iOS & Android</h1>
-                <figcaption class="figure-caption">Stay on top of the markets. Anytime, anywhere.</figcaption>
+                <h1 class="fw-semibold text-center display-4">Meet your <span style="color: #4bcc00;">on-the-go</span>
+                </h1>
+                <h1 class="display-4 fw-semibold">crypto companion</h1>
             </figure>
-            
-            
 
-            <div class="d-flex justify-content-center gap-3 mt-3">
-                <!-- Google Play -->
-                <a href="https://coingecko.app.link/landing-android" target="_blank" rel="nofollow noopener">
-                    <img src="https://static.coingecko.com/s/coingecko_logos/google_play_store-cb1f298b04afa7f74639a948d9b2e22e4aa6eea9486a2b0442c2cf9bdcda63e8.svg"
-                        alt="Google Play Store Button" class="img-fluid" style="max-width:150px;">
-                </a>
 
-                <!-- App Store -->
-                <a href="https://coingecko.app.link/landing-ios" target="_blank" rel="nofollow noopener">
-                    <img src="https://static.coingecko.com/s/coingecko_logos/apple_app_store-558245a688cc13737dfb861fd82b252d75d5afbaf343c06e3067a454675bbe05.svg"
-                        alt="Apple App Store Button" class="img-fluid" style="max-width:150px;">
-                </a>
+
+            <div class="container text-center my-4">
+                <div class="d-flex justify-content-center gap-3 mb-3">
+                    <!-- Google Play -->
+                    <a href="https://coingecko.app.link/landing-android" target="_blank" rel="nofollow noopener">
+                        <img src="https://static.coingecko.com/s/coingecko_logos/google_play_store-cb1f298b04afa7f74639a948d9b2e22e4aa6eea9486a2b0442c2cf9bdcda63e8.svg"
+                            alt="Google Play Store Button" class="img-fluid" style="max-height:60px;">
+                    </a>
+
+                    <!-- Apple App Store -->
+                    <a href="https://coingecko.app.link/landing-ios" target="_blank" rel="nofollow noopener">
+                        <img src="https://static.coingecko.com/s/coingecko_logos/apple_app_store-558245a688cc13737dfb861fd82b252d75d5afbaf343c06e3067a454675bbe05.svg"
+                            alt="Apple App Store Button" class="img-fluid" style="max-height:60px;">
+                    </a>
+
+                    <!-- QR Code  -->
+                    <img src="https://static.coingecko.com/s/landing_pages/mobile_app_qr_code-503a3393ccc355a8c41ea1a4026c31db469665b66c47847b347e2447c80feea3.svg"
+                        alt="App QR Code" class="img-fluid d-none d-lg-block border p-1 rounded"
+                        style="max-height:60px;">
+                </div>
+
+                <!-- Rating Section -->
+                <div class="d-flex justify-content-center align-items-center text-muted">
+                    <span class="me-1">Rated 4.8</span>
+                    <i class="fas fa-star text-warning"></i>
+                    <span class="ms-1">by over 2 million crypto investors</span>
+
+                </div>
             </div>
-            <p class="text-muted">Rated 4.8 by over 2 million crypto investors</p>
-        </div>
+
+            <br>
+            <br>
+
+            <div class="container">
+                <div class="row mt-5">
+                    <h1 class="display-5 fw-semibold">The crypto world is in your hands</h1>
+                    <p class="text-muted">Access the largest collection of unbiased crypto market data, insights, news
+                        and tools in one place. All for free.</p>
+                    <div class="col-lg-4">
+                        <div class="card" style="width: 25rem;">
+                            <img src="https://static.coingecko.com/s/landing_pages/mobile/light/2a_coins-f875c3ce9094e4cf6f7777b89f4633c151d7360983ea783db7c11a7ed256524c.png"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="text-start">Real-time Coin Prices</h5>
+                                <h6 class="card-subtitle mb-2 text-muted text-start pt-2">over 16,000+ cryptocurrencies
+                                    tracked across 200+ chains</h6>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card" style="width: 25rem;">
+                            <img src="https://static.coingecko.com/s/landing_pages/mobile/light/2b_nfts-64e1a6e04d9646b284cfc09922030456a70d92636e23923b33b1b67a20deb448.png"
+                                class="card-img-top" alt="...">
+
+                            <div class="card-body">
+                                <h5 class="card-title text-start">Powerful NFT tracker</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary text-start mt-2">Discover the top NFT
+                                    collections from 10+ blockchains, all in one app</h6>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card" style="width: 25rem;">
+                            <img src="https://static.coingecko.com/s/landing_pages/mobile/light/2c_exchanges-7692b38de6ade23e90c10110cc41caca9237cd899678a713fd2dcb25eba3de51.png"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title text-start">Trusted Exchanges</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary text-start mt-2">Over 1000+ exchanges,
+                                    ranked based on CoinGecko’s proprietary <a href="" class=" text-dark">trust
+                                        score</a></h6>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container my-5">
+                <div class="my-5" style="margin-right: 10%; margin-left: 10%; padding-top: 5%;">
+
+
+                    <div class="container my-5">
+                        <h1 class="display-4 fw-semibold mb-5">Powering Crypto’s Biggest Names</h1>
+                        <div class="logo-slider">
+                            <!-- Row 1 -->
+                            <div class="logo-track row1">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/metamask-198e9b45007340aa2067.png"
+                                    alt="Metamask">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/etherscan-a1053f781e91d1cddf76.png"
+                                    alt="Etherscan">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/cro-a22a40aee9b07691355a.png"
+                                    alt="Crypto.com">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/ledger-c99b76f1e05fb4f40a95.png"
+                                    alt="Ledger">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/nansen-651565e8c7cdabb94658.png"
+                                    alt="Nansen">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/arkham-576663b36357c3c38919.png"
+                                    alt="Arkham">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/nansen-651565e8c7cdabb94658.png"
+                                    alt="Nansen">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/metamask-198e9b45007340aa2067.png"
+                                    alt="Metamask">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/nansen-651565e8c7cdabb94658.png"
+                                    alt="Nansen">
+
+                                <!-- duplicate for smooth loop -->
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/metamask-198e9b45007340aa2067.png"
+                                    alt="Metamask">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/etherscan-a1053f781e91d1cddf76.png"
+                                    alt="Etherscan">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/cro-a22a40aee9b07691355a.png"
+                                    alt="Crypto.com">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/ledger-c99b76f1e05fb4f40a95.png"
+                                    alt="Ledger">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/nansen-651565e8c7cdabb94658.png"
+                                    alt="Nansen">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/arkham-576663b36357c3c38919.png"
+                                    alt="Arkham">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/nansen-651565e8c7cdabb94658.png"
+                                    alt="Nansen">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/metamask-198e9b45007340aa2067.png"
+                                    alt="Metamask">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/nansen-651565e8c7cdabb94658.png"
+                                    alt="Nansen">
+                            </div>
+
+                            <!-- Row 2 -->
+                            <div class="logo-track row2">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/metamask-198e9b45007340aa2067.png"
+                                    alt="Metamask">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/etherscan-a1053f781e91d1cddf76.png"
+                                    alt="Etherscan">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/cro-a22a40aee9b07691355a.png"
+                                    alt="Crypto.com">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/ledger-c99b76f1e05fb4f40a95.png"
+                                    alt="Ledger">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/nansen-651565e8c7cdabb94658.png"
+                                    alt="Nansen">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/arkham-576663b36357c3c38919.png"
+                                    alt="Arkham">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/nansen-651565e8c7cdabb94658.png"
+                                    alt="Nansen">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/metamask-198e9b45007340aa2067.png"
+                                    alt="Metamask">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/nansen-651565e8c7cdabb94658.png"
+                                    alt="Nansen">
+
+                                <!-- duplicate for smooth loop -->
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/metamask-198e9b45007340aa2067.png"
+                                    alt="Metamask">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/etherscan-a1053f781e91d1cddf76.png"
+                                    alt="Etherscan">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/cro-a22a40aee9b07691355a.png"
+                                    alt="Crypto.com">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/ledger-c99b76f1e05fb4f40a95.png"
+                                    alt="Ledger">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/nansen-651565e8c7cdabb94658.png"
+                                    alt="Nansen">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/arkham-576663b36357c3c38919.png"
+                                    alt="Arkham">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/nansen-651565e8c7cdabb94658.png"
+                                    alt="Nansen">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/metamask-198e9b45007340aa2067.png"
+                                    alt="Metamask">
+                                <img src="https://static.coingecko.com/packs/static/app/assets/images/landing_pages/mobile/partners/nansen-651565e8c7cdabb94658.png"
+                                    alt="Nansen">
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
     </main>
 
     <!-- Footer Section -->
