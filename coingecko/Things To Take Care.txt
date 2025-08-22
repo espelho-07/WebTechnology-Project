@@ -1,0 +1,1 @@
+By simply adding class="img-fluid", the image will now scale down perfectly to fit within the col-lg-5 column. ✨ aa img fluid apde img tag ma aena class ma nkhi deye toh img container n bypass kr baar nai nikle

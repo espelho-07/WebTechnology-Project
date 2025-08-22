@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="https://www.coingecko.com/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="Header.css">
+    <link rel="stylesheet" href="Footer.css">
+    <link rel="stylesheet" href="Advertisement.css">
+    <link rel="stylesheet" href="Crypto_Portfolio_page.css">
+    <title>Free Crypto Portfolio Tracker | CoinGecko</title>
+
+    <style>
+        .hr-light {
+            border-top: 1px solid #e9ecef;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="announcement" class=" d-block announcement">
+        <div class="container d-flex justify-content-between align-items-center py-2 px-4">
+
+            <div class="text-light fw-semibold small">
+                ✨ Leadership Update:
+                <a href="https://www.coingecko.com/learn/strengthens-leadership" target="_blank" rel="noopener"
+                    class="b">
+                    <b class="fw-bold">New CEO, President &amp; CTO</b>
+                </a>
+            </div>
+
+            <i data-action="click->application#hideAnnouncement" class="fas fa-times cursor-pointer text-light"></i>
+
+        </div>
+    </div>
+
+    <!-- Nav Bar Header Section -->
+    <div class="container my-3 d-none d-lg-block medium text-muted">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="stats small text-muted">
+                <span class="pe-4 medium">Coins: <a href="#"
+                        class="fw-semibold text-dark text-decoration-none small">18,017</a></span>
+                <span class="pe-4 medium">Exchanges: <a href="#"
+                        class="fw-semibold text-dark text-decoration-none small">1,339</a></span>
+                <span class="pe-4 medium">Market Cap: <a href="#"
+                        class="fw-semibold text-dark text-decoration-none small">$4.019T <span class="text-success">▲
+                            2.0%</span></a></span>
+                <span class="pe-4 medium">24h Vol: <a href="#"
+                        class="fw-semibold text-dark text-decoration-none small">$144.952B</a></span>
+                <span class="pe-4 medium">Dominance: <a href="#"
+                        class="fw-semibold text-dark text-decoration-none small">BTC
+                        56.0% ETH 12.6%</a></span>
+                <span class="pe-4 medium">Gas: <a href="#" class="fw-semibold text-dark text-decoration-none small">585
+                        GWEI</a></span>
+            </div>
+            <div class="user-actions-top">
+                <div class="d-none d-lg-flex align-items-center gap-2">
+
+                    <div class="nav-item dropdown">
+                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-gear"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item text-dark d-flex justify-content-between" href="#">Language
+                                    <span class="text-muted ps-5">English</span></a></li>
+                            <li><a class="dropdown-item text-dark d-flex justify-content-between" href="#">Currency
+                                    <span class="text-muted ps-5">USD</span></a></li>
+                            <li><a class="dropdown-item text-dark d-flex justify-content-between align-items-center"
+                                    href="#">Dark Mode <i class="fas fa-toggle-off ps-1 fs-4"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-item dropdown">
+                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-phone"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end p-3 text-center" style="width: 220px;">
+                            <img alt="app QR code" class="img-fluid mb-2"
+                                src="https://static.coingecko.com/s/navbar_gekko_app_qr_code-9c7a6abb02579193774328071d5a6b244564f81e6978c1ffc3d86904b54685f4.png" />
+                            <h6 class="fw-bold mb-1">Get the CoinGecko app</h6>
+                            <p class="medium text-muted mb-0">Scan the QR code to track crypto prices on-the-go</p>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-login btn-sm" data-bs-toggle="modal"
+                        data-bs-target="#authModal">
+                        Login
+                    </button>
+                    <button type="button" class="btn btn-signup btn-sm" data-bs-toggle="modal"
+                        data-bs-target="#authModal">
+                        Sign up
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="hr-light my-0" />
+
+    <nav class="navbar navbar-expand-xl">
+        <div class="container">
+            <a class="navbar-brand py-0 me-4" href="/">
+                <img alt="CoinGecko"
+                    src="https://static.coingecko.com/s/coingecko-logo-5683263fd3ea8a4f152dd5f7299acfc5f84ee73955428acff22913b8e59e6c54.svg"
+                    style="height: 30px;" class="d-block" />
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown me-3"><a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Cryptocurrencies</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i
+                                        class="fas fa-ranking-star fa-fw me-2 text-muted"></i>By Market Cap</a></li>
+                            <li><a class="dropdown-item" href="#"><i
+                                        class="fas fa-shapes fa-fw me-2 text-muted"></i>Categories</a></li>
+                            <li><a class="dropdown-item" href="#"><i
+                                        class="fas fa-link fa-fw me-2 text-muted"></i>Chains</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Popular</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i
+                                        class="fas fa-list-ol fa-fw me-2 text-muted"></i>Highlights</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-magic fa-fw me-2 text-muted"></i>New
+                                    Cryptocurrencies</a></li>
+                            <li><a class="dropdown-item" href="#"><i
+                                        class="fas fa-trophy fa-fw me-2 text-muted"></i>Gainers & Losers</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Tools</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="#">All Coins</a></li>
+                            <li><a class="dropdown-item" href="#">Compare Coins and NFT</a></li>
+                            <li><a class="dropdown-item" href="#">Converter</a></li>
+                            <li><a class="dropdown-item" href="#">Global Chart</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown me-3"><a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Exchanges</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i
+                                        class="fas fa-university fa-fw me-2 text-muted"></i>Crypto Exchanges</a></li>
+                            <li><a class="dropdown-item" href="#"><i
+                                        class="fas fa-cubes fa-fw me-2 text-muted"></i>Decentralized Exchanges</a></li>
+                            <li><a class="dropdown-item" href="#"><i
+                                        class="fas fa-chart-line fa-fw me-2 text-muted"></i>Derivatives</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown me-3"><a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">NFT</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-image fa-fw me-2 text-muted"></i>NFT
+                                    Floor Price</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-gem fa-fw me-2 text-muted"></i>NFT
+                                    Related Coins</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-star fa-fw me-2 text-muted"></i>NFT
+                                    Watchlist</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-globe fa-fw me-2 text-muted"></i>NFT
+                                    Global Chart</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown me-3"><a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Learn</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i
+                                        class="fas fa-book-open fa-fw me-2 text-muted"></i>Learn Crypto</a></li>
+                            <li><a class="dropdown-item" href="#"><i
+                                        class="fas fa-lightbulb fa-fw me-2 text-muted"></i>Research Insights</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown me-3"><a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i
+                                        class="fas fa-star fa-fw me-2 text-muted"></i>Crypto Portfolio</a></li>
+                            <li><a class="dropdown-item" href="#"><i
+                                        class="fas fa-mobile-alt fa-fw me-2 text-muted"></i>CoinGecko App</a></li>
+                            <li><a class="dropdown-item" href="#"><i
+                                        class="fas fa-crown fa-fw me-2 text-muted"></i>CoinGecko Premium</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown me-3"><a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">API</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Crypto API</a></li>
+                            <li><a class="dropdown-item" href="#">On-chain DEX API</a></li>
+                            <li><a class="dropdown-item" href="#">NFT API</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Resources</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Pricing</a></li>
+                            <li><a class="dropdown-item" href="#">Documentation</a></li>
+                            <li><a class="dropdown-item" href="#">Learn API</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Enterprise</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="#">API for Business</a></li>
+                            <li><a class="dropdown-item" href="#">Case Studies</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-3 ms-auto">
+                    <a href="#" class="text-dark text-decoration-none fw-semibold medium">
+                        <i class="fas fa-candy-cane text-primary me-1"></i>Candy
+                    </a>
+                    <a href="#" class="text-dark text-decoration-none fw-semibold medium">
+                        <i class="fas fa-star text-warning me-1"></i>Portfolio
+                    </a>
+                    <form class="position-relative">
+                        <i class="fas fa-search position-absolute top-50 translate-middle-y"
+                            style="left: 12px; color: #aaa;"></i>
+                        <input class="form-control form-control-sm rounded-pill" type="search" placeholder="Search"
+                            aria-label="Search" style="padding-left: 34px; width: 250px;" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <hr class="hr-light my-0" />
+
+    <!-- Main Body Section Start HERE....... -->
+    <main>
+        <div class="container text-center my-5">
+            <figure class="figure">
+                <img class="img-fluid" loading="lazy"
+                    src="https://static.coingecko.com/s/landing_pages/mobile/light/1_hero-f06eb03c57ff9627f2b8fe87903b6f00e3fc8b613fea9bf13ba2f7c6e421b6de.png"
+                    class="figure-img img-fluid rounded" alt="Mobile Phone">
+                <h1 class="fw-bold">Also available on iOS & Android</h1>
+                <figcaption class="figure-caption">Stay on top of the markets. Anytime, anywhere.</figcaption>
+            </figure>
+            
+            
+
+            <div class="d-flex justify-content-center gap-3 mt-3">
+                <!-- Google Play -->
+                <a href="https://coingecko.app.link/landing-android" target="_blank" rel="nofollow noopener">
+                    <img src="https://static.coingecko.com/s/coingecko_logos/google_play_store-cb1f298b04afa7f74639a948d9b2e22e4aa6eea9486a2b0442c2cf9bdcda63e8.svg"
+                        alt="Google Play Store Button" class="img-fluid" style="max-width:150px;">
+                </a>
+
+                <!-- App Store -->
+                <a href="https://coingecko.app.link/landing-ios" target="_blank" rel="nofollow noopener">
+                    <img src="https://static.coingecko.com/s/coingecko_logos/apple_app_store-558245a688cc13737dfb861fd82b252d75d5afbaf343c06e3067a454675bbe05.svg"
+                        alt="Apple App Store Button" class="img-fluid" style="max-width:150px;">
+                </a>
+            </div>
+            <p class="text-muted">Rated 4.8 by over 2 million crypto investors</p>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <hr class="hr-light" />
+
+        <div class="container py-3">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                    <a class="navbar-brand py-0 mb-3 d-block" href="/">
+                        <img alt="CoinGecko"
+                            src="https://static.coingecko.com/s/coingecko-logo-5683263fd3ea8a4f152dd5f7299acfc5f84ee73955428acff22913b8e59e6c54.svg"
+                            style="height: 40px;" />
+                    </a>
+                    <medium class="text-muted">
+                        CoinGecko provides a fundamental analysis of the crypto market. In addition to tracking
+                        price,
+                        volume and market capitalisation, CoinGecko tracks community growth, open-source code
+                        development,
+                        major events and on-chain metrics.
+                    </medium>
+                </div>
+
+                <div class="col-lg-8 col-md-12">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="mt-4 mt-lg-0">
+                                <a class="fw-semibold text-muted text-decoration-none d-flex justify-content-between align-items-center py-2 border-lg-0"
+                                    data-bs-toggle="collapse" href="#footerResources" role="button">
+                                    Resources <span class="d-lg-none"><i class="fas fa-plus"></i></span>
+                                </a>
+                                <div class="collapse d-lg-block" id="footerResources">
+                                    <ul class="list-unstyled d-flex flex-column gap-3 pt-2">
+                                        <li><a href="/en/news" class="text-muted text-decoration-none">Crypto
+                                                News</a>
+                                        </li>
+                                        <li><a href="/en/public-companies-bitcoin"
+                                                class="text-muted text-decoration-none">Bitcoin Treasury</a></li>
+                                        <li><a href="/en/cryptocurrency-heatmap"
+                                                class="text-muted text-decoration-none">Crypto Heatmap</a></li>
+                                        <li><a href="/en/api" class="text-muted text-decoration-none">Crypto API</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <div class="mt-4 mt-lg-0">
+                                <a class="fw-semibold text-muted text-decoration-none d-flex justify-content-between align-items-center py-2 border-lg-0"
+                                    data-bs-toggle="collapse" href="#footerSupport" role="button">
+                                    Support <span class="d-lg-none"><i class="fas fa-plus"></i></span>
+                                </a>
+                                <div class="collapse d-lg-block" id="footerSupport">
+                                    <ul class="list-unstyled d-flex flex-column gap-3 pt-2">
+                                        <li><a href="/request-form?locale=en"
+                                                class="text-muted text-decoration-none">Request Form</a></li>
+                                        <li><a href="https://gcko.io/coingeckoads"
+                                                class="text-muted text-decoration-none">Advertising</a></li>
+                                        <li><a href="/en/candy/partners-getting-started"
+                                                class="text-muted text-decoration-none">Candy Rewards Listing</a>
+                                        </li>
+                                        <li><a href="https://support.coingecko.com/"
+                                                class="text-muted text-decoration-none">Help Center</a></li>
+                                        <li><a href="https://hackenproof.com/coingecko/coingecko"
+                                                class="text-muted text-decoration-none">Bug Bounty</a></li>
+                                        <li><a href="/en/faq" class="text-muted text-decoration-none">FAQ</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <div class="mt-4 mt-lg-0">
+                                <a class="fw-semibold text-muted text-decoration-none d-flex justify-content-between align-items-center py-2 border-lg-0"
+                                    data-bs-toggle="collapse" href="#footerAbout" role="button">
+                                    About CoinGecko
+                                    <span class="d-lg-none"><i class="fas fa-plus"></i></span>
+                                </a>
+                                <div class="collapse d-lg-block" id="footerAbout">
+                                    <ul class="list-unstyled d-flex flex-column gap-3 pt-2">
+                                        <li><a href="/en/about" class="text-muted text-decoration-none">About Us</a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" rel="noreferrer" href="https://careers.coingecko.com/"
+                                                class="text-muted text-decoration-none">
+                                                Careers <span class="badge bg-success text-white ms-1">Join
+                                                    Us</span>
+                                            </a>
+                                        </li>
+                                        <li><a href="https://brand.coingecko.com"
+                                                class="text-muted text-decoration-none">Branding Guide</a></li>
+                                        <li><a href="/en/methodology"
+                                                class="text-muted text-decoration-none">Methodology</a></li>
+                                        <li><a href="/en/disclaimer"
+                                                class="text-muted text-decoration-none">Disclaimer</a>
+                                        </li>
+                                        <li><a href="/en/terms" class="text-muted text-decoration-none">Terms of
+                                                Service</a>
+                                        </li>
+                                        <li><a href="/en/privacy" class="text-muted text-decoration-none">Privacy
+                                                Policy</a>
+                                        </li>
+                                        <li><a href="/en/ad-policy" class="text-muted text-decoration-none">Ad
+                                                Policy</a>
+                                        </li>
+                                        <li>
+                                            <div id="ot-sdk-btn" class="text-muted" style="cursor: pointer;">Cookie
+                                                Preferences</div>
+                                        </li>
+                                        <li><a target="_blank" rel="noreferrer" href="https://trust.coingecko.com"
+                                                class="text-muted text-decoration-none">Trust Center</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <div class="mt-4 mt-lg-0">
+                                <a class="fw-semibold text-muted text-decoration-none d-flex justify-content-between align-items-center py-2 border-lg-0"
+                                    data-bs-toggle="collapse" href="#footerCommunity" role="button">
+                                    Community
+                                    <span class="d-lg-none"><i class="fas fa-plus"></i></span>
+                                </a>
+                                <div class="collapse d-lg-block" id="footerCommunity">
+                                    <ul class="list-unstyled d-flex flex-column gap-3 pt-2">
+                                        <li><a target="_blank" rel="noopener noreferrer"
+                                                href="https://twitter.com/coingecko"
+                                                class="text-muted text-decoration-none">X/Twitter</a></li>
+                                        <li><a target="_blank" rel="noopener noreferrer" href="https://t.me/coingecko"
+                                                class="text-muted text-decoration-none">Telegram Chat</a></li>
+                                        <li><a target="_blank" rel="noopener noreferrer"
+                                                href="https://t.me/coingeckonews"
+                                                class="text-muted text-decoration-none">Telegram News</a></li>
+                                        <li><a target="_blank" rel="noopener noreferrer"
+                                                href="https://www.instagram.com/coingecko/"
+                                                class="text-muted text-decoration-none">Instagram</a></li>
+                                        <li><a target="_blank" rel="noopener noreferrer"
+                                                href="https://www.reddit.com/r/coingecko/"
+                                                class="text-muted text-decoration-none">Reddit</a></li>
+                                        <li><a target="_blank" rel="noopener noreferrer"
+                                                href="https://discord.gg/EhrkaCH"
+                                                class="text-muted text-decoration-none">Discord</a></li>
+                                        <li><a target="_blank" rel="noopener noreferrer"
+                                                href="https://www.facebook.com/coingecko"
+                                                class="text-muted text-decoration-none">Facebook</a></li>
+                                        <li><a target="_blank" rel="noopener noreferrer"
+                                                href="https://www.youtube.com/channel/UC-OTgwOAI7KmP0eDAtqN3Ow?sub_confirmation=1"
+                                                class="text-muted text-decoration-none">Youtube</a></li>
+                                        <li><a target="_blank" rel="noopener noreferrer"
+                                                href="https://www.tiktok.com/@coingeckotv"
+                                                class="text-muted text-decoration-none">TikTok</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="hr-light" />
+
+        <div class="container my-4">
+            <div class="row align-items-center">
+                <div class="col-lg-9 mb-4 mb-lg-0">
+                    <h5 class="fw-semibold">
+                        Interested to stay up-to-date with cryptocurrencies?
+                    </h5>
+                    <p class="text-muted mb-0">
+                        Get the latest crypto news, updates, and reports by subscribing to our free newsletter.
+                    </p>
+                </div>
+
+                <div class="col-lg-3">
+                    <form>
+                        <div class="d-flex flex-column flex-md-row gap-2">
+                            <input type="email" class="form-control form-control-sm"
+                                placeholder="Enter your email address" aria-label="Enter your email address" />
+                            <button type="submit" class="btn btn-subscribe btn-sm">
+                                Subscribe
+                            </button>
+                        </div>
+                        <div id="subscribe-newsletter-captcha-footer" class="mt-3"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <hr class="hr-light" />
+
+        <div class="container my-5">
+            <div class="d-lg-flex justify-content-between align-items-center">
+                <div class="text-center text-lg-start mb-4 mb-lg-0">
+                    <medium class="text-muted">© 2025 CoinGecko. All Rights Reserved.</medium>
+                </div>
+
+                <div class="text-center text-lg-end">
+                    <a target="_blank" rel="noopener" href="https://coingecko.app.link/footer-android" class="me-2">
+                        <img loading="lazy" alt="Google Play Store Button" width="135" height="40"
+                            src="https://static.coingecko.com/s/coingecko_logos/google_play_store-cb1f298b04afa7f74639a948d9b2e22e4aa6eea9486a2b0442c2cf9bdcda63e8.svg" />
+                    </a>
+                    <a target="_blank" rel="noopener" href="https://coingecko.app.link/footer-ios">
+                        <img loading="lazy" alt="Apple App Store Button" width="135" height="40"
+                            src="https://static.coingecko.com/s/coingecko_logos/apple_app_store-558245a688cc13737dfb861fd82b252d75d5afbaf343c06e3067a454675bbe05.svg" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-muted my-4" role="alert">
+                <strong><u>IMPORTANT DISCLAIMER:</u></strong>
+                <medium class="ps-2">
+                    All content provided herein our website, hyperlinked sites, associated applications, forums,
+                    blogs,
+                    social media accounts and other platforms (“Site”) is for your general information only,
+                    procured
+                    from
+                    third party sources. We make no warranties of any kind in relation to our content, including but
+                    not
+                    limited to accuracy and updatedness. No part of the content that we provide constitutes
+                    financial
+                    advice, legal advice or any other form of advice meant for your specific reliance for any
+                    purpose.
+                    Any
+                    use or reliance on our content is solely at your own risk and discretion. You should conduct
+                    your
+                    own
+                    research, review, analyse and verify our content before relying on them. Trading is a highly
+                    risky
+                    activity that can lead to major losses, please therefore consult your financial advisor before
+                    making
+                    any decision. No content on our Site is meant to be a solicitation or offer.
+                </medium>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body p-4 p-lg-5">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-7">
+                            <div class="d-flex flex-column">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h5 class="modal-title fs-4 fw-bold" id="authModalLabel">Welcome to CoinGecko</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <p class="text-muted mb-4">Login or Sign up in seconds</p>
+                                <div class="d-grid gap-3">
+                                    <button class="btn btn-sso d-flex align-items-center justify-content-center">
+                                        <img width="20" height="20"
+                                            src="https://static.coingecko.com/s/google-167c1e093ccfc014420e14da91325a1f70c91e592f58164fefe84603d2fde02e.svg"
+                                            class="me-3">
+                                        <span class="fw-semibold">Continue with Google</span>
+                                    </button>
+                                    <button class="btn btn-sso d-flex align-items-center justify-content-center">
+                                        <img width="20" height="20"
+                                            src="https://static.coingecko.com/s/apple_black-6d9a519c69649e1a56774f4036ec552e412e73d5f9c2b0bab193732e47721533.svg"
+                                            class="me-3">
+                                        <span class="fw-semibold">Continue with Apple</span>
+                                    </button>
+                                </div>
+                                <div class="hr-divider my-4 small">or</div>
+                                <form>
+                                    <div class="mb-3">
+                                        <input type="email" class="form-control form-control-custom" id="user_email"
+                                            placeholder="Enter your email address">
+                                    </div>
+                                    <button type="button" class="btn btn-secondary w-100 py-3 fw-semibold">
+                                        Continue with email
+                                    </button>
+                                </form>
+                                <div class="mt-4 text-center">
+                                    <small class="text-muted">
+                                        By continuing, you agree to our
+                                        <a href="#" class="fw-semibold text-dark">Terms of Service</a> and
+                                        <a href="#" class="fw-semibold text-dark">Privacy Policy</a>.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-lg-5 d-none d-lg-flex flex-column align-items-center text-center qr-section border-start ps-lg-5">
+                            <img width="330" height="200"
+                                src="https://static.coingecko.com/s/auth_modal_desktop_app_gekko-cc1d39d731a8ab1d1f7fd5f9ec6bb05cd79efc183e08d2cba34d5a0abbff014b.png"
+                                class="img-fluid">
+                            <h5 class="fw-bold fs-4 mt-4">Get the CoinGecko app</h5>
+                            <p class="text-muted small mb-4">
+                                Scan the QR code or click one of the links below to track crypto prices on-the-go
+                            </p>
+                            <div class="d-flex gap-2">
+                                <a href="#">
+                                    <img width="150" height="45"
+                                        src="https://static.coingecko.com/s/coingecko_logos/apple_app_store-558245a688cc13737dfb861fd82b252d75d5afbaf343c06e3067a454675bbe05.svg">
+                                </a>
+                                <a href="#">
+                                    <img width="150" height="45"
+                                        src="https://static.coingecko.com/s/coingecko_logos/google_play_store-cb1f298b04afa7f74639a948d9b2e22e4aa6eea9486a2b0442c2cf9bdcda63e8.svg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
