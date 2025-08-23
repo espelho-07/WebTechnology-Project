@@ -1,0 +1,88 @@
+ body {
+     background-color: #f8f9fa;
+ }
+
+ .section-spacer {
+     padding-top: 5rem;
+     padding-bottom: 5rem;
+ }
+
+ .pricing-card {
+     transition: all 0.3s ease-in-out;
+ }
+
+ .pricing-card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+ }
+
+ .coingeckobutton {
+     background-color: #4bcc00;
+ }
+
+ /* Common compact style for both cards */
+ .pricing-card.small-card {
+     padding: 1.5rem !important;
+     /* reduce card padding */
+     max-width: 350px;
+     /* smaller width */
+     margin: auto;
+     /* center cards */
+ }
+
+ .pricing-card.small-card h3 {
+     font-size: 1.25rem;
+ }
+
+ .pricing-card.small-card p {
+     font-size: 0.9rem;
+ }
+
+ .pricing-card.small-card .card-title span {
+     font-size: 2rem;
+ }
+
+ .pricing-card.small-card .btn {
+     padding: 0.5rem 1rem;
+     font-size: 0.9rem;
+ }
+
+ /* Monthly Card (1st one) */
+ .monthly-card {
+     border: 2px solid #ffffff !important;
+     /* white border */
+ }
+
+ .monthly-card .btn {
+     background-color: #4bcc00;
+     border-color: #4bcc00;
+     color: #fff;
+ }
+
+ .monthly-card .btn:hover {
+     background-color: #3da800;
+     border-color: #3da800;
+     color: #fff;
+ }
+
+ /* Yearly Card (2nd one) */
+ .yearly-card {
+     border: 3px solid #4bcc00 !important;
+ }
+
+ .yearly-card .btn {
+     background-color: #4bcc00;
+     border-color: #4bcc00;
+     color: #fff;
+ }
+
+ .yearly-card .btn:hover {
+     background-color: #3da800;
+     border-color: #3da800;
+     color: #fff;
+ }
+
+ .yearly-card .badge {
+     background-color: #4bcc00 !important;
+     color: #fff !important;
+ }
